@@ -6,7 +6,7 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding-bottom:100px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}.header{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(155,191,122,0.3)}.date-icon{font-size:16px;font-weight:500;background:rgba(155,191,122,0.2);padding:8px 16px;border-radius:30px;color:#5d8c3a}.close-btn{font-size:24px;cursor:pointer;color:#5d8c3a;background:rgba(255,255,255,0.5);border:none;width:40px;height:40px;border-radius:40px}.tabs{display:flex;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:8px 16px;gap:16px;border-bottom:1px solid rgba(155,191,122,0.3);overflow-x:auto}.tab{font-size:14px;color:#6a5a6a;padding:8px 0;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}.tab.active{color:#9bbf7a;border-bottom-color:#9bbf7a}.content{padding:16px}.screen{display:block}.screen.hidden{display:none}.subject-card{background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-radius:28px;padding:20px;margin-bottom:20px}.subject-title{font-size:22px;font-weight:700;margin-bottom:16px;background:linear-gradient(135deg,#9bbf7a,#7dab5a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.task-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:12px}.task-btn{background:rgba(155,191,122,0.15);border:1px solid rgba(155,191,122,0.3);border-radius:20px;padding:12px;text-align:center;cursor:pointer;font-weight:600;color:#5d8c3a;transition:all 0.2s}.task-btn:hover{background:rgba(155,191,122,0.3);transform:translateY(-2px)}.quiz-card{background:rgba(255,255,255,0.95);border-radius:28px;padding:24px}.rule-title{font-size:20px;font-weight:700;margin-bottom:16px;color:#5d8c3a}.rule-text{font-size:16px;line-height:1.5;color:#4a5a4a;white-space:pre-line}.rule-text table{width:100%;border-collapse:collapse;margin:12px 0}.rule-text th,.rule-text td{border:1px solid #c8e6c9;padding:8px;text-align:left}.rule-text th{background:#e8f5e9;color:#5d8c3a}.btn-main{width:100%;background:linear-gradient(135deg,#9bbf7a,#7dab5a);color:white;border:none;padding:14px;border-radius:24px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:20px}.footer{position:fixed;bottom:0;left:0;width:100%;padding:12px 16px;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-top:1px solid rgba(155,191,122,0.3);display:flex;justify-content:center;gap:40px;z-index:10}.social-item{text-align:center;text-decoration:none;color:#9bbf7a;transition:transform 0.2s}.social-item:hover{transform:translateY(-3px)}.social-icon{font-size:28px;margin-bottom:4px;display:block}.social-label{font-size:10px;font-weight:500;letter-spacing:0.5px}.stat-card{background:rgba(255,255,255,0.9);border-radius:28px;padding:20px;margin-bottom:16px;text-align:center}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding-bottom:100px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}.header{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(155,191,122,0.3)}.date-icon{font-size:16px;font-weight:500;background:rgba(155,191,122,0.2);padding:8px 16px;border-radius:30px;color:#5d8c3a}.close-btn{font-size:24px;cursor:pointer;color:#5d8c3a;background:rgba(255,255,255,0.5);border:none;width:40px;height:40px;border-radius:40px}.tabs{display:flex;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:8px 16px;gap:16px;border-bottom:1px solid rgba(155,191,122,0.3);overflow-x:auto}.tab{font-size:14px;color:#6a5a6a;padding:8px 0;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}.tab.active{color:#9bbf7a;border-bottom-color:#9bbf7a}.content{padding:16px}.screen{display:block}.screen.hidden{display:none}.subject-card{background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-radius:28px;padding:20px;margin-bottom:20px}.subject-title{font-size:22px;font-weight:700;margin-bottom:16px;background:linear-gradient(135deg,#9bbf7a,#7dab5a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.task-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:12px}.task-btn{background:rgba(155,191,122,0.15);border:1px solid rgba(155,191,122,0.3);border-radius:20px;padding:12px;text-align:center;cursor:pointer;font-weight:600;color:#5d8c3a;transition:all 0.2s}.task-btn:hover{background:rgba(155,191,122,0.3);transform:translateY(-2px)}.quiz-card{background:rgba(255,255,255,0.95);border-radius:28px;padding:24px}.rule-title{font-size:20px;font-weight:700;margin-bottom:16px;color:#5d8c3a}.rule-text{font-size:16px;line-height:1.5;color:#4a5a4a}.rule-text table{width:100%;border-collapse:collapse;margin:12px 0}.rule-text th,.rule-text td{border:1px solid #c8e6c9;padding:8px;text-align:left;vertical-align:top}.rule-text th{background:#e8f5e9;color:#5d8c3a}.rule-text .diagram{background:#f5f9f0;padding:12px;border-radius:16px;margin:12px 0;font-family:monospace;white-space:pre}.btn-main{width:100%;background:linear-gradient(135deg,#9bbf7a,#7dab5a);color:white;border:none;padding:14px;border-radius:24px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:20px}.footer{position:fixed;bottom:0;left:0;width:100%;padding:12px 16px;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-top:1px solid rgba(155,191,122,0.3);display:flex;justify-content:center;gap:40px;z-index:10}.social-item{text-align:center;text-decoration:none;color:#9bbf7a;transition:transform 0.2s}.social-item:hover{transform:translateY(-3px)}.social-icon{font-size:28px;margin-bottom:4px;display:block}.social-label{font-size:10px;font-weight:500;letter-spacing:0.5px}.stat-card{background:rgba(255,255,255,0.9);border-radius:28px;padding:20px;margin-bottom:16px;text-align:center}
     </style>
 </head>
 <body>
@@ -27,32 +27,235 @@
 <script>
 const tg = window.Telegram?.WebApp; if (tg) { tg.expand(); tg.ready(); }
 
-let sections = [];
-let historyFacts = ["📚 Правила будут добавляться постепенно", "🎯 Готовься к ЦЭ/ЦТ с нами", "📖 Учи правила — сдавай экзамены"];
-
-async function loadData() {
-    try {
-        const response = await fetch('data.json');
-        if (!response.ok) throw new Error('Файл data.json не найден');
-        const data = await response.json();
-        sections = data.sections;
-        console.log("Загружено заданий:", sections.length);
-        renderTasks();
-        renderStats();
-    } catch(e) {
-        console.error("Ошибка загрузки:", e);
-        sections = [];
-        document.getElementById('tasksList').innerHTML = '<div class="stat-card">❌ Ошибка загрузки данных. Проверьте, что файл data.json есть в репозитории.</div>';
+const sections = [
+    {
+        id: "A1",
+        title: "А1. Безударные гласные в корне",
+        rule: `
+<b>🔹 Проверяемые гласные</b> — проверяются ударением:<br>
+<i>посв<u>я</u>тить (св<u>я</u>то), пол<u>о</u>скать (пол<u>о</u>щет)</i><br><br>
+<b>🔹 Непроверяемые</b> — словарные: <i>абажур, аромат, винегрет, каталог</i><br><br>
+<b>🔹 Чередующиеся корни</b><br>
+<table>
+    <tr><th>Корни</th><th>Условие</th><th>Примеры</th></tr>
+    <tr><td>-лаг-/-лож-</td><td>перед Г — А, перед Ж — О</td><td>пол<u>а</u>гать — пол<u>о</u>жить</td></tr>
+    <tr><td>-раст-/-ращ-/-рос-</td><td>перед СТ, Щ — А, иначе — О</td><td>выр<u>а</u>стить — выр<u>о</u>с</td></tr>
+    <tr><td>-кас-/-кос-</td><td>есть суффикс А — А, иначе — О</td><td>к<u>а</u>саться — к<u>о</u>снуться</td></tr>
+    <tr><td>-бер-/-бир-</td><td>есть суффикс А — И, иначе — Е</td><td>соб<u>и</u>рать — соб<u>е</u>ру</td></tr>
+    <tr><td>-мер-/-мир-</td><td>есть суффикс А — И, иначе — Е</td><td>зам<u>и</u>рать — зам<u>е</u>реть</td></tr>
+    <tr><td>-тер-/-тир-</td><td>есть суффикс А — И, иначе — Е</td><td>выт<u>и</u>рать — выт<u>е</u>реть</td></tr>
+    <tr><td>-гор-/-гар-</td><td>под ударением — А, без — О</td><td>з<u>а</u>гар — заг<u>о</u>релый</td></tr>
+    <tr><td>-зор-/-зар-</td><td>под ударением — О, без — А</td><td>з<u>о</u>ри — з<u>а</u>ря</td></tr>
+</table>
+        `
+    },
+    {
+        id: "A2",
+        title: "А2. Правописание приставок",
+        rule: `
+<b>🔹 Приставки ПРЕ- и ПРИ-</b><br>
+<table>
+    <tr><th>ПРЕ-</th><th>ПРИ-</th></tr>
+    <tr><td>= очень (<i>пр<u>е</u>милый</i>)</td><td>приближение (<i>пр<u>и</u>ехать</i>)</td></tr>
+    <tr><td>= пере- (<i>пр<u>е</u>градить</i>)</td><td>присоединение (<i>пр<u>и</u>клеить</i>)</td></tr>
+    <tr><td></td><td>неполнота действия (<i>пр<u>и</u>сесть</i>)</td></tr>
+</table>
+<br>
+<b>🔹 Приставки на -З/-С</b><br>
+<table>
+    <tr><th>Перед звонкими</th><th>Перед глухими</th></tr>
+    <tr><td>раз-, без-, воз-, из-, низ-, чрез-</td><td>рас-, бес-, вос-, ис-, нис-, чрес-</td></tr>
+    <tr><td><i>разбежаться, беззвучный</i></td><td><i>расстелить, бесполезный</i></td></tr>
+</table>
+<br>
+<b>🔹 Приставка С-</b> всегда пишется одинаково: <i>сделать, сбить</i><br>
+<b>Запомнить:</b> <i>здесь, здание, здоровье, ни зги</i>
+        `
+    },
+    {
+        id: "A3",
+        title: "А3. Правописание суффиксов",
+        rule: `
+<b>🔹 Суффиксы прилагательных</b><br>
+<table>
+    <tr><th>Суффикс</th><th>Условие</th><th>Примеры</th></tr>
+    <tr><td>-ив-</td><td>под ударением</td><td>крас<u>и</u>вый, правд<u>и</u>вый</td></tr>
+    <tr><td>-ев-</td><td>без ударения</td><td>сирен<u>е</u>вый, тюл<u>е</u>вый</td></tr>
+    <tr><td>-лив-/-чив-</td><td>всегда И</td><td>заботл<u>и</u>вый, доверч<u>и</u>вый</td></tr>
+</table>
+<br>
+<b>🔹 Суффиксы существительных -чик-/-щик-</b><br>
+<table>
+    <tr><th>После д, т, з, с, ж</th><th>После остальных</th></tr>
+    <tr><td>-чик-</td><td>-щик-</td></tr>
+    <tr><td><i>переводчик, разведчик</i></td><td><i>каменщик, стекольщик</i></td></tr>
+</table>
+        `
+    },
+    {
+        id: "A4",
+        title: "А4. Правописание личных окончаний глаголов и суффиксов причастий",
+        rule: `
+<b>🔹 Спряжение глаголов</b><br>
+<table>
+    <tr><th>I спряжение</th><th>II спряжение</th></tr>
+    <tr><td>все глаголы на -ать, -еть, -ять, -оть, -уть, -ти, -чь<br>+ <i>брить, стелить</i></td><td>все глаголы на -ить<br>+ <i>гнать, держать, дышать, слышать, видеть, смотреть, ненавидеть, обидеть, вертеть, терпеть, зависеть</i></td></tr>
+</table>
+<br>
+<b>🔹 Окончания глаголов</b><br>
+<table>
+    <tr><th>Лицо</th><th>I спр.</th><th>II спр.</th></tr>
+    <tr><td>1 л. ед.</td><td>-у/-ю</td><td>-у/-ю</td></tr>
+    <tr><td>2 л. ед.</td><td>-ешь</td><td>-ишь</td></tr>
+    <tr><td>3 л. ед.</td><td>-ет</td><td>-ит</td></tr>
+    <tr><td>1 л. мн.</td><td>-ем</td><td>-им</td></tr>
+    <tr><td>2 л. мн.</td><td>-ете</td><td>-ите</td></tr>
+    <tr><td>3 л. мн.</td><td>-ут/-ют</td><td>-ат/-ят</td></tr>
+</table>
+<br>
+<b>🔹 Суффиксы причастий</b><br>
+<table>
+    <tr><th>Действительные причастия наст.вр.</th><th>Страдательные причастия наст.вр.</th></tr>
+    <tr><td>I спр.: -ущ-/-ющ- (<i>пиш<u>ущ</u>ий</i>)</td><td>I спр.: -ем-/-ом- (<i>чита<u>ем</u>ый</i>)</td></tr>
+    <tr><td>II спр.: -ащ-/-ящ- (<i>дыш<u>ащ</u>ий</i>)</td><td>II спр.: -им- (<i>вид<u>им</u>ый</i>)</td></tr>
+</table>
+        `
+    },
+    {
+        id: "A5",
+        title: "А5. Правописание НЕ с разными частями речи",
+        rule: `
+<b>🔹 НЕ с существительными, прилагательными, наречиями на -о/-е</b><br>
+<table>
+    <tr><th>Слитно</th><th>Раздельно</th></tr>
+    <tr><td>без НЕ не употребляется (<i>ненастье</i>)</td><td>противопоставление с <b>а</b> (<i>не правда, а ложь</i>)</td></tr>
+    <tr><td>можно заменить синонимом (<i>неправда = ложь</i>)</td><td>слова <i>отнюдь не, далеко не, вовсе не</i></td></tr>
+</table>
+<br>
+<b>🔹 НЕ с причастиями</b><br>
+<table>
+    <tr><th>Слитно</th><th>Раздельно</th></tr>
+    <tr><td>нет зависимого слова (<i>незаконченная работа</i>)</td><td>есть зависимое слово (<i>не законченная вовремя работа</i>)</td></tr>
+    <tr><td>с наречиями меры и степени (<i>совсем нерешённая задача</i>)</td><td>краткие причастия (<i>задача не решена</i>)</td></tr>
+</table>
+<br>
+<b>🔹 НЕ с глаголами и деепричастиями</b><br>
+Слитно: без НЕ не употребляется (<i>негодовать, недоумевая</i>).<br>
+Раздельно: во всех остальных случаях (<i>не читал, не зная</i>).
+        `
+    },
+    {
+        id: "A6",
+        title: "А6. Правописание НЕ и НИ в местоимениях и наречиях",
+        rule: `
+<b>🔹 НЕ или НИ?</b><br>
+<table>
+    <tr><th>НЕ</th><th>НИ</th></tr>
+    <tr><td>под ударением</td><td>без ударения</td></tr>
+    <tr><td><i>н<u>е</u>где, н<u>е</u>куда, н<u>е</u>кто</i></td><td><i>н<u>и</u>где, н<u>и</u>куда, н<u>и</u>кто</i></td></tr>
+</table>
+<br>
+<b>🔹 Раздельное написание</b><br>
+Если между НЕ/НИ и местоимением есть предлог, пишется раздельно:<br>
+<i>не у кого, ни с кем, не о чем</i>.
+        `
+    },
+    {
+        id: "A7",
+        title: "А7. Слитное, дефисное, раздельное написание слов",
+        rule: `
+<b>🔹 Слитно</b><br>
+• сложные слова с соединительными гласными (<i>пароход, землетрясение</i>)<br>
+• слова с <b>полу-</b> (<i>полуботинки, полумера</i>)<br>
+• слова с иноязычными приставками <b>анти-, гипер-, контр-, супер-, ультра-</b><br>
+<br>
+<b>🔹 Дефис</b><br>
+• <b>пол-</b> перед гласной, Л, прописной буквой (<i>пол-арбуза, пол-лимона, пол-Москвы</i>)<br>
+• географические названия (<i>Ростов-на-Дону, Нью-Йорк</i>)<br>
+• повтор слов (<i>чуть-чуть, еле-еле, крест-накрест</i>)<br>
+• наречия с <b>по-</b> и суффиксами <b>-ому/-ему/-и</b> (<i>по-новому, по-русски, по-волчьи</i>)<br>
+<br>
+<b>🔹 Раздельно</b><br>
+• сочетания предлогов с существительными (<i>на ходу, на лету, в конце концов</i>)<br>
+• наречные выражения (<i>без устали, до упаду, за границей</i>)
+        `
+    },
+    {
+        id: "A8",
+        title: "А8. Правописание предлогов, союзов, частиц",
+        rule: `
+<b>🔹 Предлоги</b><br>
+<table>
+    <tr><th>Слитно</th><th>Раздельно</th></tr>
+    <tr><td><i>ввиду (=из-за), вследствие, вроде, насчёт</i></td><td><i>в течение, в продолжение, в заключение, в связи с</i></td></tr>
+</table>
+<br>
+<b>🔹 Союзы (слитно) / омонимичные формы (раздельно)</b><br>
+<table>
+    <tr><th>Союз</th><th>Раздельно</th></tr>
+    <tr><td><i>тоже, также (=и)</i></td><td><i>то же, так же</i></td></tr>
+    <tr><td><i>чтобы (=для того чтобы)</i></td><td><i>что бы</i></td></tr>
+    <tr><td><i>зато (=но)</i></td><td><i>за то</i></td></tr>
+    <tr><td><i>итак (=следовательно)</i></td><td><i>и так</i></td></tr>
+</table>
+<br>
+<b>🔹 Частицы</b><br>
+Раздельно: <i>бы, ли, же</i><br>
+Через дефис: <i>-то, -либо, -нибудь, кое-</i>
+        `
+    },
+    {
+        id: "A9",
+        title: "А9. Тире между подлежащим и сказуемым",
+        rule: `
+<b>🔹 Тире ставится</b><br>
+• сущ. – сущ.: <i>Книга – источник знаний</i><br>
+• числ. – числ.: <i>Дважды два – четыре</i><br>
+• инф. – инф.: <i>Жить – родине служить</i><br>
+• перед <i>это, вот, значит</i>: <i>Честность – это главное</i><br>
+<br>
+<b>🔹 Тире не ставится</b><br>
+• есть связка <i>есть</i>: <i>Бедность не порок</i><br>
+• подлежащее – личное местоимение: <i>Я ученик</i><br>
+• сказуемое – прилагательное: <i>День теплый</i>
+        `
+    },
+    {
+        id: "A10",
+        title: "А10. Обособленные определения и приложения",
+        rule: `
+<b>🔹 Обособляются запятыми</b><br>
+• причастный оборот после определяемого слова: <i>Лес, <u>поражённый дождями</u>, стоял мрачный</i><br>
+• определение, относящееся к личному местоимению: <i><u>Усталый</u>, я прилёг отдохнуть</i><br>
+• распространённое приложение после определяемого слова: <i>Сосед, <u>мужчина лет пятидесяти</u>, вышел</i><br>
+• приложение с <b>как</b> (если есть оттенок причины): <i><u>Как человек умный</u>, он понял это сразу</i><br>
+<br>
+<b>🔹 Не обособляются</b><br>
+• определение перед определяемым словом<br>
+• приложение с <b>как</b> в значении «в качестве»: <i>Он известен <u>как хирург</u></i>
+        `
+    },
+    {
+        id: "A11",
+        title: "А11. Обособленные обстоятельства",
+        rule: `
+<b>🔹 Обособляются запятыми</b><br>
+• деепричастные обороты: <i><u>Спустившись к реке</u>, мы увидели лодку</i><br>
+• одиночные деепричастия: <i>Он шёл, <u>не оглядываясь</u></i><br>
+• обороты с <b>несмотря на, невзирая на</b>: <i><u>Несмотря на дождь</u>, мы пошли гулять</i><br>
+<br>
+<b>🔹 Не обособляются</b><br>
+• фразеологизмы: <i>работал <u>спустя рукава</u>, бежал <u>сломя голову</u></i><br>
+• деепричастия, перешедшие в наречия: <i>сидел <u>молча</u>, читал <u>лёжа</u></i>
+        `
     }
-}
+];
+
+let historyFacts = ["📚 Правила будут добавляться постепенно", "🎯 Готовься к ЦЭ/ЦТ с нами", "📖 Учи правила — сдавай экзамены"];
 
 function renderTasks() {
     const now = new Date(); document.getElementById('currentDate').innerText = `${now.getDate()} ${now.toLocaleString('ru', { month: 'long' })} ${now.getFullYear()}`;
     const container = document.getElementById('tasksList'); container.innerHTML = '';
-    if (!sections || sections.length === 0) {
-        container.innerHTML = '<div class="stat-card">📚 Загрузка...</div>';
-        return;
-    }
     const card = document.createElement('div'); card.className = 'subject-card';
     card.innerHTML = `<div class="subject-title">📋 Задания ЦЭ/ЦТ</div><div class="task-grid" id="taskGrid"></div>`;
     container.appendChild(card);
@@ -105,12 +308,10 @@ function switchTab(tab) {
 
 document.querySelectorAll('.tab').forEach(tab => { tab.addEventListener('click', () => switchTab(tab.dataset.tab)); });
 
-loadData().then(() => {
-    renderTasks();
-    renderStats();
-    renderProfile();
-    switchTab('tasks');
-});
+renderTasks();
+renderStats();
+renderProfile();
+switchTab('tasks');
 </script>
 </body>
 </html>
