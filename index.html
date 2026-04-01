@@ -35,15 +35,23 @@ async function loadData() {
         const response = await fetch('https://swayzee123.github.io/russian-bot/data.json');
         const data = await response.json();
         sections = data.sections;
+        console.log("Загружено заданий:", sections.length);
+        renderTasks();
+        renderStats();
     } catch(e) {
         console.error("Ошибка загрузки:", e);
         sections = [];
+        document.getElementById('tasksList').innerHTML = '<div class="stat-card">❌ Ошибка загрузки данных</div>';
     }
 }
 
 function renderTasks() {
     const now = new Date(); document.getElementById('currentDate').innerText = `${now.getDate()} ${now.toLocaleString('ru', { month: 'long' })} ${now.getFullYear()}`;
     const container = document.getElementById('tasksList'); container.innerHTML = '';
+    if (!sections || sections.length === 0) {
+        container.innerHTML = '<div class="stat-card">📚 Загрузка...</div>';
+        return;
+    }
     const card = document.createElement('div'); card.className = 'subject-card';
     card.innerHTML = `<div class="subject-title">📋 Задания ЦЭ/ЦТ</div><div class="task-grid" id="taskGrid"></div>`;
     container.appendChild(card);
