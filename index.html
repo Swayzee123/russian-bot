@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding-bottom:130px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}.header{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(155,191,122,0.3)}.date-icon{font-size:16px;font-weight:500;background:rgba(155,191,122,0.2);padding:8px 16px;border-radius:30px;color:#5d8c3a}.close-btn{font-size:24px;cursor:pointer;color:#5d8c3a;background:rgba(255,255,255,0.5);border:none;width:40px;height:40px;border-radius:40px}.tabs{display:flex;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:8px 16px;gap:16px;border-bottom:1px solid rgba(155,191,122,0.3);overflow-x:auto}.tab{font-size:14px;color:#6a5a6a;padding:8px 0;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}.tab.active{color:#9bbf7a;border-bottom-color:#9bbf7a}.content{padding:16px}.screen{display:block}.screen.hidden{display:none}.subject-card{background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-radius:28px;padding:20px;margin-bottom:20px}.subject-title{font-size:22px;font-weight:700;margin-bottom:16px;background:linear-gradient(135deg,#9bbf7a,#7dab5a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.task-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:12px}.task-btn{background:rgba(155,191,122,0.15);border:1px solid rgba(155,191,122,0.3);border-radius:20px;padding:12px;text-align:center;cursor:pointer;font-weight:600;color:#5d8c3a;transition:all 0.2s}.task-btn:hover{background:rgba(155,191,122,0.3);transform:translateY(-2px)}.quiz-card{background:rgba(255,255,255,0.95);border-radius:28px;padding:24px}.rule-title{font-size:20px;font-weight:700;margin-bottom:16px;color:#5d8c3a}.rule-text{font-size:16px;line-height:1.5;color:#4a5a4a;white-space:pre-line}.btn-main{width:100%;background:linear-gradient(135deg,#9bbf7a,#7dab5a);color:white;border:none;padding:14px;border-radius:24px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:20px}.footer{position:fixed;bottom:0;left:0;width:100%;padding:12px 16px;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-top:1px solid rgba(155,191,122,0.3);display:flex;justify-content:center;gap:40px;z-index:10}.social-item{text-align:center;text-decoration:none;color:#9bbf7a;transition:transform 0.2s}.social-item:hover{transform:translateY(-3px)}.social-icon{font-size:28px;margin-bottom:4px;display:block}.social-label{font-size:10px;font-weight:500;letter-spacing:0.5px}.stat-card{background:rgba(255,255,255,0.9);border-radius:28px;padding:20px;margin-bottom:16px;text-align:center}.rank-item{display:flex;align-items:center;gap:12px;padding:12px;background:rgba(255,255,255,0.9);border-radius:20px;margin-bottom:8px}.rank-avatar{width:44px;height:44px;border-radius:44px;background:#9bbf7a;display:flex;align-items:center;justify-content:center;font-size:24px}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding-bottom:100px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}.header{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(155,191,122,0.3)}.date-icon{font-size:16px;font-weight:500;background:rgba(155,191,122,0.2);padding:8px 16px;border-radius:30px;color:#5d8c3a}.close-btn{font-size:24px;cursor:pointer;color:#5d8c3a;background:rgba(255,255,255,0.5);border:none;width:40px;height:40px;border-radius:40px}.tabs{display:flex;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:8px 16px;gap:16px;border-bottom:1px solid rgba(155,191,122,0.3);overflow-x:auto}.tab{font-size:14px;color:#6a5a6a;padding:8px 0;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}.tab.active{color:#9bbf7a;border-bottom-color:#9bbf7a}.content{padding:16px}.screen{display:block}.screen.hidden{display:none}.subject-card{background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-radius:28px;padding:20px;margin-bottom:20px}.subject-title{font-size:22px;font-weight:700;margin-bottom:16px;background:linear-gradient(135deg,#9bbf7a,#7dab5a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.task-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:12px}.task-btn{background:rgba(155,191,122,0.15);border:1px solid rgba(155,191,122,0.3);border-radius:20px;padding:12px;text-align:center;cursor:pointer;font-weight:600;color:#5d8c3a;transition:all 0.2s}.task-btn:hover{background:rgba(155,191,122,0.3);transform:translateY(-2px)}.quiz-card{background:rgba(255,255,255,0.95);border-radius:28px;padding:24px}.rule-title{font-size:20px;font-weight:700;margin-bottom:16px;color:#5d8c3a}.rule-text{font-size:16px;line-height:1.5;color:#4a5a4a;white-space:pre-line}.rule-text table{width:100%;border-collapse:collapse;margin:12px 0}.rule-text th,.rule-text td{border:1px solid #c8e6c9;padding:8px;text-align:left}.rule-text th{background:#e8f5e9;color:#5d8c3a}.btn-main{width:100%;background:linear-gradient(135deg,#9bbf7a,#7dab5a);color:white;border:none;padding:14px;border-radius:24px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:20px}.footer{position:fixed;bottom:0;left:0;width:100%;padding:12px 16px;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-top:1px solid rgba(155,191,122,0.3);display:flex;justify-content:center;gap:40px;z-index:10}.social-item{text-align:center;text-decoration:none;color:#9bbf7a;transition:transform 0.2s}.social-item:hover{transform:translateY(-3px)}.social-icon{font-size:28px;margin-bottom:4px;display:block}.social-label{font-size:10px;font-weight:500;letter-spacing:0.5px}.stat-card{background:rgba(255,255,255,0.9);border-radius:28px;padding:20px;margin-bottom:16px;text-align:center}
     </style>
 </head>
 <body>
 <div id="mainScreen" class="screen">
     <div class="header"><div class="date-icon" id="currentDate"></div><button class="close-btn" onclick="window.Telegram?.WebApp?.close()">✕</button></div>
-    <div class="tabs"><div class="tab active" data-tab="tasks">📚 Задания</div><div class="tab" data-tab="stats">📊 Статистика</div><div class="tab" data-tab="rating">🏆 Рейтинг</div><div class="tab" data-tab="profile">👤 Профиль</div></div>
-    <div class="content"><div id="tasksList"></div><div id="statsContent" style="display:none;"></div><div id="ratingList" style="display:none;"></div><div id="profileContent" style="display:none;"></div></div>
+    <div class="tabs"><div class="tab active" data-tab="tasks">📚 Задания</div><div class="tab" data-tab="stats">📊 Статистика</div><div class="tab" data-tab="profile">👤 Профиль</div></div>
+    <div class="content"><div id="tasksList"></div><div id="statsContent" style="display:none;"></div><div id="profileContent" style="display:none;"></div></div>
     <div class="footer">
         <a href="https://t.me/histforyou" target="_blank" class="social-item"><i class="fab fa-telegram-plane social-icon"></i><div class="social-label">TELEGRAM КАНАЛ</div></a>
         <a href="https://t.me/swayzeee" target="_blank" class="social-item"><i class="fab fa-telegram-plane social-icon"></i><div class="social-label">МОЙ TELEGRAM</div></a>
@@ -25,15 +24,8 @@
     <div class="header"><button class="close-btn" onclick="backToTasks()">←</button><div id="ruleTitle"></div><div style="width:40px"></div></div>
     <div class="content"><div class="quiz-card"><div class="rule-title" id="ruleHeader"></div><div class="rule-text" id="ruleText"></div><button class="btn-main" onclick="backToTasks()">Назад</button></div></div>
 </div>
-<div id="resultScreen" class="screen" style="display:none;">
-    <div class="header"><button class="close-btn" onclick="backToTasks()">←</button><div>Результат</div><div style="width:40px"></div></div>
-    <div class="content"><div class="result-card"><div class="result-score" id="resultScore"></div><button class="btn-main" onclick="backToTasks()">На главную</button></div></div>
-</div>
 <script>
 const tg = window.Telegram?.WebApp; if (tg) { tg.expand(); tg.ready(); }
-const SUPABASE_URL = "https://roakqdkabmtsemavyseh.supabase.co";
-const SUPABASE_KEY = "sb_publishable_dYmhQWEHHhUhcqLbxr6M_w_rhrk_S7z";
-const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 let sections = [];
 let historyFacts = ["📚 Правила будут добавляться постепенно", "🎯 Готовься к ЦЭ/ЦТ с нами", "📖 Учи правила — сдавай экзамены"];
@@ -47,25 +39,6 @@ async function loadData() {
         console.error("Ошибка загрузки:", e);
         sections = [];
     }
-}
-
-let userProgress = {};
-
-function loadLocalProgress() {
-    const saved = localStorage.getItem("russian_progress");
-    if (saved) userProgress = JSON.parse(saved);
-    else userProgress = {};
-}
-function saveLocalProgress() {
-    localStorage.setItem("russian_progress", JSON.stringify(userProgress));
-}
-
-function getTotalBestScore() {
-    let total = 0;
-    for (const section of sections) {
-        total += userProgress[section.id]?.bestScore || 0;
-    }
-    return total;
 }
 
 function renderTasks() {
@@ -89,56 +62,44 @@ function showRule(section) {
     document.getElementById('ruleText').innerHTML = section.rule;
     document.getElementById('mainScreen').style.display = 'none';
     document.getElementById('ruleScreen').style.display = 'block';
-    document.getElementById('resultScreen').style.display = 'none';
 }
 
 function backToTasks() {
     document.getElementById('mainScreen').style.display = 'block';
     document.getElementById('ruleScreen').style.display = 'none';
-    document.getElementById('resultScreen').style.display = 'none';
     renderTasks();
 }
 
 function renderStats() {
-    const totalBest = getTotalBestScore();
-    const totalSections = sections.length;
-    const percent = totalSections ? Math.round((totalBest / totalSections) * 100) : 0;
-    document.getElementById('statsContent').innerHTML = `<div class="stat-card"><div style="font-size:48px;">📊</div><div style="font-size:48px;font-weight:800;color:#9bbf7a;">${percent}%</div><div>правил изучено</div><div class="stat-card" style="margin-top:16px;"><div>🏆 Всего баллов: ${totalBest}</div><div>📚 Заданий: ${totalSections}</div></div></div>`;
-}
-
-async function loadRating() {
-    try {
-        const { data } = await supabaseClient.from('users').select('name, total_score').order('total_score', { ascending: false }).limit(20);
-        const container = document.getElementById('ratingList');
-        if (!data || data.length === 0) { container.innerHTML = '<div class="stat-card">⭐ Пока никого нет</div>'; return; }
-        container.innerHTML = data.map((user, i) => `<div class="rank-item"><div class="rank-avatar">${i === 0 ? '🏆' : (i === 1 ? '🥈' : (i === 2 ? '🥉' : '📖'))}</div><div style="flex:1"><strong>${user.name || "Аноним"}</strong></div><div style="font-weight:bold;color:#9bbf7a">${user.total_score || 0} баллов</div></div>`).join('');
-    } catch(e) { document.getElementById('ratingList').innerHTML = '<div class="stat-card">⭐ Рейтинг временно недоступен</div>'; }
+    let totalLearned = 0;
+    const saved = localStorage.getItem("russian_rules_viewed");
+    const viewed = saved ? JSON.parse(saved) : [];
+    sections.forEach(s => { if(viewed.includes(s.id)) totalLearned++; });
+    const percent = sections.length ? Math.round((totalLearned / sections.length) * 100) : 0;
+    document.getElementById('statsContent').innerHTML = `<div class="stat-card"><div style="font-size:48px;">📊</div><div style="font-size:48px;font-weight:800;color:#9bbf7a;">${percent}%</div><div>правил изучено</div><div class="stat-card" style="margin-top:16px;"><div>📚 Просмотрено: ${totalLearned} / ${sections.length}</div></div></div>`;
 }
 
 function renderProfile() {
     const user = tg?.initDataUnsafe?.user;
     const randomFact = historyFacts[Math.floor(Math.random() * historyFacts.length)];
     const avatarHtml = user?.photo_url ? `<img src="${user.photo_url}" style="width:80px;height:80px;border-radius:80px;margin:0 auto 16px;display:block;object-fit:cover;">` : `<div style="width:80px;height:80px;border-radius:80px;background:linear-gradient(135deg,#9bbf7a,#7dab5a);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:40px;">📖</div>`;
-    document.getElementById('profileContent').innerHTML = `<div class="stat-card">${avatarHtml}<div style="font-size:24px;font-weight:bold;">${user?.first_name || "Гость"}</div><div style="color:#9bbf7a;">🏆 ${getTotalBestScore()} баллов</div></div><div class="stat-card"><div style="font-size:18px;margin-bottom:12px;">📖 Совет дня</div><div style="font-size:14px;">${randomFact}</div></div>`;
+    document.getElementById('profileContent').innerHTML = `<div class="stat-card">${avatarHtml}<div style="font-size:24px;font-weight:bold;">${user?.first_name || "Гость"}</div><div style="color:#9bbf7a;">🎓 Готовься к ЦЭ/ЦТ</div></div><div class="stat-card"><div style="font-size:18px;margin-bottom:12px;">📖 Совет дня</div><div style="font-size:14px;">${randomFact}</div></div>`;
 }
 
 function switchTab(tab) {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active')); document.querySelector(`.tab[data-tab="${tab}"]`).classList.add('active');
-    document.getElementById('tasksList').style.display = 'none'; document.getElementById('statsContent').style.display = 'none'; document.getElementById('ratingList').style.display = 'none'; document.getElementById('profileContent').style.display = 'none';
+    document.getElementById('tasksList').style.display = 'none'; document.getElementById('statsContent').style.display = 'none'; document.getElementById('profileContent').style.display = 'none';
     if (tab === 'tasks') { document.getElementById('tasksList').style.display = 'block'; renderTasks(); }
     if (tab === 'stats') { document.getElementById('statsContent').style.display = 'block'; renderStats(); }
-    if (tab === 'rating') { document.getElementById('ratingList').style.display = 'block'; loadRating(); }
     if (tab === 'profile') { document.getElementById('profileContent').style.display = 'block'; renderProfile(); }
 }
 
 document.querySelectorAll('.tab').forEach(tab => { tab.addEventListener('click', () => switchTab(tab.dataset.tab)); });
 
-loadLocalProgress();
 loadData().then(() => {
     renderTasks();
     renderStats();
     renderProfile();
-    loadRating();
     switchTab('tasks');
 });
 </script>
