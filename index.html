@@ -6,7 +6,7 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding-bottom:100px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}.header{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(155,191,122,0.3)}.date-icon{font-size:16px;font-weight:500;background:rgba(155,191,122,0.2);padding:8px 16px;border-radius:30px;color:#5d8c3a}.close-btn{font-size:24px;cursor:pointer;color:#5d8c3a;background:rgba(255,255,255,0.5);border:none;width:40px;height:40px;border-radius:40px}.tabs{display:flex;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:8px 16px;gap:16px;border-bottom:1px solid rgba(155,191,122,0.3);overflow-x:auto}.tab{font-size:14px;color:#6a5a6a;padding:8px 0;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}.tab.active{color:#9bbf7a;border-bottom-color:#9bbf7a}.content{padding:16px}.screen{display:block}.screen.hidden{display:none}.subject-card{background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-radius:28px;padding:20px;margin-bottom:20px}.subject-title{font-size:22px;font-weight:700;margin-bottom:16px;background:linear-gradient(135deg,#9bbf7a,#7dab5a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.task-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:12px}.task-btn{background:rgba(155,191,122,0.15);border:1px solid rgba(155,191,122,0.3);border-radius:20px;padding:12px;text-align:center;cursor:pointer;font-weight:600;color:#5d8c3a;transition:all 0.2s}.task-btn:hover{background:rgba(155,191,122,0.3);transform:translateY(-2px)}.quiz-card{background:rgba(255,255,255,0.95);border-radius:28px;padding:24px}.rule-title{font-size:20px;font-weight:700;margin-bottom:16px;color:#5d8c3a}.rule-text{font-size:16px;line-height:1.5;color:#4a5a4a}.rule-text table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}.rule-text th,.rule-text td{border:1px solid #c8e6c9;padding:10px;text-align:left;vertical-align:top}.rule-text th{background:#e8f5e9;color:#2e5c1e;font-weight:600}.rule-text .ex{background:#f9f9f9}.btn-main{width:100%;background:linear-gradient(135deg,#9bbf7a,#7dab5a);color:white;border:none;padding:14px;border-radius:24px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:20px}.footer{position:fixed;bottom:0;left:0;width:100%;padding:12px 16px;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-top:1px solid rgba(155,191,122,0.3);display:flex;justify-content:center;gap:40px;z-index:10}.social-item{text-align:center;text-decoration:none;color:#9bbf7a;transition:transform 0.2s}.social-item:hover{transform:translateY(-3px)}.social-icon{font-size:28px;margin-bottom:4px;display:block}.social-label{font-size:10px;font-weight:500;letter-spacing:0.5px}.stat-card{background:rgba(255,255,255,0.9);border-radius:28px;padding:20px;margin-bottom:16px;text-align:center}
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding-bottom:100px;background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}.header{background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:16px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(155,191,122,0.3)}.date-icon{font-size:16px;font-weight:500;background:rgba(155,191,122,0.2);padding:8px 16px;border-radius:30px;color:#5d8c3a}.close-btn{font-size:24px;cursor:pointer;color:#5d8c3a;background:rgba(255,255,255,0.5);border:none;width:40px;height:40px;border-radius:40px}.tabs{display:flex;background:rgba(255,255,255,0.85);backdrop-filter:blur(20px);padding:8px 16px;gap:16px;border-bottom:1px solid rgba(155,191,122,0.3);overflow-x:auto}.tab{font-size:14px;color:#6a5a6a;padding:8px 0;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}.tab.active{color:#9bbf7a;border-bottom-color:#9bbf7a}.content{padding:16px}.screen{display:block}.screen.hidden{display:none}.subject-card{background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border-radius:28px;padding:20px;margin-bottom:20px}.subject-title{font-size:22px;font-weight:700;margin-bottom:16px;background:linear-gradient(135deg,#9bbf7a,#7dab5a);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.task-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:12px}.task-btn{background:rgba(155,191,122,0.15);border:1px solid rgba(155,191,122,0.3);border-radius:20px;padding:12px;text-align:center;cursor:pointer;font-weight:600;color:#5d8c3a;transition:all 0.2s}.task-btn:hover{background:rgba(155,191,122,0.3);transform:translateY(-2px)}.quiz-card{background:rgba(255,255,255,0.95);border-radius:28px;padding:24px;box-shadow:0 8px 20px rgba(0,0,0,0.05)}.rule-title{font-size:22px;font-weight:700;margin-bottom:20px;color:#2e5c1e;border-left:4px solid #9bbf7a;padding-left:12px}.rule-text{font-size:16px;line-height:1.5;color:#2c3e2c}.rule-text table{width:100%;border-collapse:collapse;margin:20px 0;border-radius:16px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.05)}.rule-text th,.rule-text td{border:1px solid #c8e6c9;padding:12px;text-align:left;vertical-align:top}.rule-text th{background:#e8f5e9;color:#2e5c1e;font-weight:700;font-size:15px}.rule-text tr:nth-child(even){background:#f9fbf7}.rule-text .info-block{background:#e8f5e9;border-left:4px solid #9bbf7a;padding:14px;margin:16px 0;border-radius:16px}.rule-text .info-block i{color:#5d8c3a;margin-right:8px}.rule-text .example{background:#fff8e7;border-left:4px solid #ffc107;padding:12px;margin:12px 0;border-radius:12px}.rule-text .ex-word{font-weight:600;color:#5d8c3a}.btn-main{width:100%;background:linear-gradient(135deg,#9bbf7a,#7dab5a);color:white;border:none;padding:14px;border-radius:24px;font-size:16px;font-weight:bold;cursor:pointer;margin-top:20px}.footer{position:fixed;bottom:0;left:0;width:100%;padding:12px 16px;background:rgba(255,255,255,0.9);backdrop-filter:blur(20px);border-top:1px solid rgba(155,191,122,0.3);display:flex;justify-content:center;gap:40px;z-index:10}.social-item{text-align:center;text-decoration:none;color:#9bbf7a;transition:transform 0.2s}.social-item:hover{transform:translateY(-3px)}.social-icon{font-size:28px;margin-bottom:4px;display:block}.social-label{font-size:10px;font-weight:500;letter-spacing:0.5px}.stat-card{background:rgba(255,255,255,0.9);border-radius:28px;padding:20px;margin-bottom:16px;text-align:center}
     </style>
 </head>
 <body>
@@ -29,246 +29,283 @@ const tg = window.Telegram?.WebApp; if (tg) { tg.expand(); tg.ready(); }
 
 const sections = [
     {id: "A1", title: "А1. Безударные гласные в корне", rule: `
-<table><tr><th>Тип корня</th><th>Условие</th><th>Примеры</th></tr>
-<tr><td>Проверяемые</td><td>проверка ударением</td><td>посв<i>я</i>тить (св<i>я</i>то), пол<i>о</i>скать (пол<i>о</i>щет)</td></tr>
-<tr><td>Непроверяемые</td><td>словарные слова</td><td>абажур, аромат, винегрет, каталог</td></tr>
-<tr><td>лаг-лож</td><td>перед Г — А, перед Ж — О</td><td>пол<i>а</i>гать — пол<i>о</i>жить</td></tr>
-<tr><td>раст-ращ-рос</td><td>перед СТ, Щ — А, иначе — О</td><td>выр<i>а</i>стить — выр<i>о</i>с</td></tr>
-<tr><td>кас-кос</td><td>есть суффикс А — А, иначе — О</td><td>к<i>а</i>саться — к<i>о</i>снуться</td></tr>
-<tr><td>бер-бир, мер-мир, тер-тир</td><td>есть суффикс А — И, иначе — Е</td><td>соб<i>и</i>рать — соб<i>е</i>ру</td></tr>
-<tr><td>гор-гар</td><td>под ударением — А, без — О</td><td>з<i>а</i>гар — заг<i>о</i>релый</td></tr>
-<tr><td>зор-зар</td><td>под ударением — О, без — А</td><td>з<i>о</i>ри — з<i>а</i>ря</td></tr></table>`},
+<div class="info-block"><i class="fas fa-lightbulb"></i> <b>Проверяемые гласные</b> — проверяются ударением: <span class="ex-word">посв<u>я</u>тить (св<u>я</u>то)</span>, <span class="ex-word">пол<u>о</u>скать (пол<u>о</u>щет)</span></div>
+<div class="info-block"><i class="fas fa-book"></i> <b>Непроверяемые</b> — словарные: <i>абажур, аромат, винегрет, каталог</i></div>
+<table class="table">
+    <tr><th>Корни</th><th>Условие</th><th>Примеры</th></tr>
+    <tr><td>лаг-лож</td><td>перед Г — А, перед Ж — О</td><td>пол<u>а</u>гать — пол<u>о</u>жить</td></tr>
+    <tr><td>раст-ращ-рос</td><td>перед СТ, Щ — А, иначе — О</td><td>выр<u>а</u>стить — выр<u>о</u>с</td></tr>
+    <tr><td>кас-кос</td><td>есть суффикс А — А, иначе — О</td><td>к<u>а</u>саться — к<u>о</u>снуться</td></tr>
+    <tr><td>бер-бир, мер-мир, тер-тир</td><td>есть суффикс А — И, иначе — Е</td><td>соб<u>и</u>рать — соб<u>е</u>ру</td></tr>
+    <tr><td>гор-гар</td><td>под ударением — А, без — О</td><td>з<u>а</u>гар — заг<u>о</u>релый</td></tr>
+    <tr><td>зор-зар</td><td>под ударением — О, без — А</td><td>з<u>о</u>ри — з<u>а</u>ря</td></tr>
+</table>`},
     {id: "A2", title: "А2. Правописание приставок", rule: `
-<table><tr><th>Приставка</th><th>Значение / Условие</th><th>Примеры</th></tr>
-<tr><td>ПРЕ-</td><td>= очень, = пере</td><td>пр<i>е</i>милый, пр<i>е</i>градить</td></tr>
-<tr><td>ПРИ-</td><td>приближение, присоединение, неполнота</td><td>пр<i>и</i>ехать, пр<i>и</i>клеить, пр<i>и</i>сесть</td></tr>
-<tr><td>на -З</td><td>перед звонкими</td><td>разбежаться, беззвучный</td></tr>
-<tr><td>на -С</td><td>перед глухими</td><td>расстелить, бесполезный</td></tr></table>
-<p><b>Запомнить:</b> здесь, здание, здоровье, ни зги. Приставка С- всегда пишется одинаково: сделать, сбить.</p>`},
-    {id: "A3", title: "А3. Правописание суффиксов", rule: `
-<table><tr><th>Часть речи</th><th>Суффикс</th><th>Условие</th><th>Примеры</th></tr>
-<tr><td>прилагательные</td><td>-ив-</td><td>под ударением</td><td>крас<i>и</i>вый, правд<i>и</i>вый</td></tr>
-<tr><td>прилагательные</td><td>-ев-</td><td>без ударения</td><td>сирен<i>е</i>вый, тюл<i>е</i>вый</td></tr>
-<tr><td>прилагательные</td><td>-лив-, -чив-</td><td>всегда И</td><td>заботл<i>и</i>вый, доверч<i>и</i>вый</td></tr>
-<tr><td>существительные</td><td>-чик-</td><td>после д,т,з,с,ж</td><td>переводчик, разведчик</td></tr>
-<tr><td>существительные</td><td>-щик-</td><td>после остальных</td><td>каменщик, стекольщик</td></tr></table>`},
-    {id: "A4", title: "А4. Правописание личных окончаний глаголов и суффиксов причастий", rule: `
-<table><tr><th>Спряжение</th><th>Глаголы</th><th>Окончания ед.ч.</th><th>Окончания мн.ч.</th></tr>
-<tr><td>I спр.</td><td>на -ать, -еть, -ять, -оть, -уть, -ти, -чь + брить, стелить</td><td>-у/-ю, -ешь, -ет</td><td>-ем, -ете, -ут/-ют</td></tr>
-<tr><td>II спр.</td><td>на -ить + гнать, держать, дышать, слышать, видеть, смотреть, ненавидеть, обидеть, вертеть, терпеть, зависеть</td><td>-у/-ю, -ишь, -ит</td><td>-им, -ите, -ат/-ят</td></tr></table>
-<table><tr><th>Причастия наст.вр.</th><th>I спр.</th><th>II спр.</th></tr>
-<tr><td>действительные</td><td>-ущ-/-ющ- (пиш<i>ущ</i>ий)</td><td>-ащ-/-ящ- (дыш<i>ащ</i>ий)</td></tr>
-<tr><td>страдательные</td><td>-ем-/-ом- (чита<i>ем</i>ый)</td><td>-им- (вид<i>им</i>ый)</td></tr></table>`},
-    {id: "A5", title: "А5. Правописание НЕ с разными частями речи", rule: `
-<table><tr><th>Часть речи</th><th>Слитно</th><th>Раздельно</th></tr>
-<tr><td>сущ., прил., нареч. на -о/-е</td><td>без НЕ не употребляется<br>можно заменить синонимом</td><td>противопоставление с <b>а</b><br>слова <i>отнюдь не, далеко не, вовсе не</i></td></tr>
-<tr><td>причастия</td><td>нет зависимого слова<br>с наречиями меры и степени</td><td>есть зависимое слово<br>краткие причастия</td></tr>
-<tr><td>глаголы, деепричастия</td><td>без НЕ не употребляется (негодовать)</td><td>все остальные случаи</td></tr></table>`},
-    {id: "A6", title: "А6. Правописание НЕ и НИ в местоимениях и наречиях", rule: `
-<table><tr><th>НЕ</th><th>НИ</th></tr>
-<tr><td>под ударением</td><td>без ударения</td></tr>
-<tr><td><i>н<u>е</u>где, н<u>е</u>куда, н<u>е</u>кто</i></td><td><i>н<u>и</u>где, н<u>и</u>куда, н<u>и</u>кто</i></td></tr></table>
-<p><b>Раздельно:</b> если есть предлог: <i>не у кого, ни с кем, не о чем</i></p>`},
-    {id: "A7", title: "А7. Слитное, дефисное, раздельное написание слов", rule: `
-<table><tr><th>Слитно</th><th>Дефис</th><th>Раздельно</th></tr>
-<tr><td>сложные слова (пароход)<br>с полу- (полуботинки)<br>иноязычные приставки</td><td>пол- перед гласной, Л, прописной<br>повтор слов (чуть-чуть)<br>наречия с по- + -ому/-ему/-и</td><td>сочетания предлогов с сущ.<br>наречные выражения</td></tr></table>
-<p><i>пол-арбуза, пол-лимона, пол-Москвы; по-новому, по-русски; на ходу, без устали</i></p>`},
-    {id: "A8", title: "А8. Правописание предлогов, союзов, частиц", rule: `
-<table><tr><th>Предлоги (слитно)</th><th>Предлоги (раздельно)</th></tr>
-<tr><td>ввиду, вследствие, вроде, насчёт</td><td>в течение, в продолжение, в заключение, в связи с</td></tr></table>
-<table><tr><th>Союз (слитно)</th><th>Омоним (раздельно)</th></tr>
-<tr><td>тоже, также (=и)<br>чтобы (=для того чтобы)<br>зато (=но)<br>итак (=следовательно)</td><td>то же, так же<br>что бы<br>за то<br>и так</td></tr></table>
-<p><b>Частицы:</b> раздельно — бы, ли, же; через дефис — -то, -либо, -нибудь, кое-.</p>`},
-    {id: "A9", title: "А9. Тире между подлежащим и сказуемым", rule: `
-<table><tr><th>Тире ставится</th><th>Тире не ставится</th></tr>
-<tr><td>сущ. – сущ.<br>числ. – числ.<br>инф. – инф.<br>перед <i>это, вот, значит</i></td><td>есть связка <i>есть</i><br>подлежащее – личное местоимение<br>сказуемое – прилагательное</td></tr></table>
-<p><i>Книга – источник знаний. Дважды два – четыре. Жить – родине служить. Честность – это главное.<br>Бедность не порок. Я ученик. День теплый.</i></p>`},
-    {id: "A10", title: "А10. Обособленные определения и приложения", rule: `
-<p><b>Обособляются запятыми:</b></p>
-<ul><li>причастный оборот после определяемого слова: <i>Лес, <u>поражённый дождями</u>, стоял мрачный</i></li>
-<li>определение, относящееся к личному местоимению: <i><u>Усталый</u>, я прилёг отдохнуть</i></li>
-<li>распространённое приложение: <i>Сосед, <u>мужчина лет пятидесяти</u>, вышел</i></li>
-<li>приложение с <b>как</b> (оттенок причины): <i><u>Как человек умный</u>, он понял это сразу</i></li></ul>
-<p><b>Не обособляются:</b> определение перед определяемым словом; приложение с <b>как</b> в значении «в качестве»: <i>Он известен <u>как хирург</u></i>.</p>`},
-    {id: "A11", title: "А11. Обособленные обстоятельства", rule: `
-<p><b>Обособляются запятыми:</b></p>
-<ul><li>деепричастные обороты: <i><u>Спустившись к реке</u>, мы увидели лодку</i></li>
-<li>одиночные деепричастия: <i>Он шёл, <u>не оглядываясь</u></i></li>
-<li>обороты с <b>несмотря на</b>: <i><u>Несмотря на дождь</u>, мы пошли гулять</i></li></ul>
-<p><b>Не обособляются:</b> фразеологизмы (<i>работал спустя рукава</i>), деепричастия, перешедшие в наречия (<i>сидел молча</i>).</p>`},
-    {id: "A12", title: "А12. Знаки препинания в ССП и при однородных членах", rule: `
-<p><b>Запятая между однородными членами:</b></p>
-<ul><li>перед повторяющимися союзами (<i>и … и, ни … ни, то … то</i>)</li>
-<li>перед противительными (<i>а, но, да (=но), однако, зато</i>)</li></ul>
-<p><b>Запятая не ставится:</b> между однородными членами с одиночным союзом <b>и</b>; в фразеологизмах (<i>ни свет ни заря</i>).</p>
-<p><b>В ССП запятая ставится</b>, если части не имеют общего второстепенного члена.<br>
-<b>Не ставится</b>, если есть общий второстепенный член: <i>В саду пели птицы и шумели деревья</i>.</p>`},
-    {id: "A13", title: "А13. Знаки препинания в СПП", rule: `
-<p><b>Придаточная часть отделяется запятой:</b> <i>Я знаю, <u>что ты придёшь</u>. <u>Когда наступит утро</u>, мы отправимся в путь.</i></p>
-<p><b>Запятая не ставится:</b></p>
-<ul><li>если придаточная состоит из одного союзного слова: <i>Он сказал, что пойдёт, но не сказал <u>когда</u></i></li>
-<li>если есть отрицание: <i>Он не знал, <u>что ответить</u></i></li>
-<li>если придаточная — фразеологизм: <i>Он пришёл <u>как ни в чём не бывало</u></i></li></ul>
-<p><b>Однородные придаточные:</b> если соединены одиночным союзом <b>и</b>, запятая не ставится.</p>`},
-    {id: "A14", title: "А14. Знаки препинания в БСП", rule: `
-<table><tr><th>Знак</th><th>Условие</th><th>Пример</th></tr>
-<tr><td>,</td><td>перечисление</td><td>Солнце село, наступила тишина</td></tr>
-<tr><td>;</td><td>части распространены</td><td>Солнце уже высоко; птицы заливаются</td></tr>
-<tr><td>:</td><td>пояснение (а именно)<br>причина (потому что)<br>изъяснение (и увидел, что)</td><td>Я понял одно: нужно уходить.<br>Я не пошёл: было холодно.<br>Я выглянул: на улице шёл снег</td></tr>
-<tr><td>—</td><td>противопоставление, время, условие, следствие, быстрая смена событий</td><td>Смелые побеждают – трусливые погибают.<br>Солнце взошло – день начинается.<br>Я умираю – мне не к чему лгать.</td></tr></table>`},
-    {id: "A15", title: "А15. Вводные слова и обращения", rule: `
-<p><b>Вводные слова</b> выделяются запятыми:</p>
-<ul><li>уверенность: конечно, безусловно</li><li>неуверенность: кажется, вероятно</li><li>чувства: к счастью, к сожалению</li><li>источник: по-моему, говорят</li><li>порядок: во-первых, итак</li></ul>
-<p><b>Не являются вводными:</b> авось, будто, вдруг, ведь, даже, как будто, словно, якобы.</p>
-<p><b>Обращения</b> выделяются запятыми: <i>Иван, принеси книгу. Друзья, рад вас видеть!</i></p>`},
-    {id: "A16", title: "А16. Прямая речь и диалог", rule: `
-<table><tr><th>Схема</th><th>Пример</th></tr>
-<tr><td>А: «П».</td><td>Мама сказала: «Иди домой».</td></tr>
-<tr><td>«П», – а.</td><td>«Иди домой», – сказала мама.</td></tr>
-<tr><td>«П?» – а.</td><td>«Ты идёшь?» – спросила мама.</td></tr></table>
-<p><b>Диалог:</b><br><i>- Ты идёшь?<br>- Да, иду.</i><br>
-В строку: <i>«Ты идёшь?» – «Да, иду».</i></p>`},
-    {id: "A17", title: "А17. Знаки препинания в предложениях с разными видами связи", rule: `
-<p><b>Стык союзов</b></p>
-<ul><li>Запятая ставится, если нет второй части двойного союза (<i>то, но, однако</i>):<br>
-<i>Я понял, что, если не приду вовремя, меня не простят.</i></li>
-<li>Запятая не ставится, если есть вторая часть двойного союза:<br>
-<i>Я понял, что если не приду вовремя, <u>то</u> меня не простят.</i></li></ul>
-<p><b>Анализ конструкции:</b> найти грамматические основы → определить вид связи → расставить знаки.</p>`},
-    {id: "A18", title: "А18. Стили и типы речи", rule: `
-<table><tr><th>Стиль</th><th>Особенности</th><th>Сфера</th></tr>
-<tr><td>Разговорный</td><td>непринуждённость</td><td>бытовое общение</td></tr>
-<tr><td>Художественный</td><td>образность, выразительность</td><td>литература</td></tr>
-<tr><td>Публицистический</td><td>эмоциональность, призывность</td><td>СМИ, выступления</td></tr>
-<tr><td>Научный</td><td>термины, логичность</td><td>наука, учёба</td></tr>
-<tr><td>Официально-деловой</td><td>точность, стандартность</td><td>документы, законы</td></tr></table>
-<table><tr><th>Тип речи</th><th>Вопрос</th><th>Особенности</th></tr>
-<tr><td>Описание</td><td>какой?</td><td>много прилагательных</td></tr>
-<tr><td>Повествование</td><td>что произошло?</td><td>последовательность событий</td></tr>
-<tr><td>Рассуждение</td><td>почему?</td><td>тезис → аргументы → вывод</td></tr></table>`},
-    {id: "B1", title: "В1. Лексическое значение слова", rule: `
-<p><b>Лексическое значение</b> – то, что обозначает слово.</p>
-<p><b>Однозначные и многозначные слова:</b> <i>берёза</i> (однозначное), <i>ключ</i> (многозначное: гаечный, скрипичный, родник).</p>
-<p><b>Прямое и переносное значение:</b> <i>золотое кольцо</i> (прямое), <i>золотые руки, золотой характер</i> (переносное).</p>
-<p><b>Контекстуальное значение</b> – значение, которое слово приобретает только в данном контексте.</p>`},
-    {id: "B2", title: "В2. Лексические нормы (синонимы, антонимы, паронимы)", rule: `
-<p><b>Синонимы</b> – близкие по значению: <i>радостный – весёлый</i>.</p>
-<p><b>Антонимы</b> – противоположные: <i>день – ночь</i>.</p>
-<p><b>Паронимы</b> – похожие по звучанию, разные по значению:</p>
-<table><tr><th>Паронимы</th><th>Значение</th></tr>
-<tr><td>одеть – надеть</td><td>одеть кого-то, надеть что-то</td></tr>
-<tr><td>абонент – абонемент</td><td>абонент – пользователь, абонемент – документ</td></tr>
-<tr><td>дипломат – дипломант</td><td>дипломат – специалист, дипломант – победитель конкурса</td></tr>
-<tr><td>эффектный – эффективный</td><td>эффектный – производящий впечатление, эффективный – действенный</td></tr></table>`},
-    {id: "B3", title: "В3. Орфоэпические нормы (ударение)", rule: `
-<table><tr><th>Слова</th><th>Ударение</th></tr>
-<tr><td>каталог, квартал, договор</td><td>катал<b>о</b>г, кварт<b>а</b>л, догов<b>о</b>р</td></tr>
-<tr><td>звонит, баловать, облегчить</td><td>звон<b>и</b>т, балов<b>а</b>ть, облегч<b>и</b>ть</td></tr>
-<tr><td>премировать, красивее, щавель</td><td>премиров<b>а</b>ть, крас<b>и</b>вее, щав<b>е</b>ль</td></tr>
-<tr><td>торты, банты, жалюзи</td><td>т<b>о</b>рты, б<b>а</b>нты, жалюз<b>и</b></td></tr>
-<tr><td>досуг, средства, статуя</td><td>дос<b>у</b>г, ср<b>е</b>дства, ст<b>а</b>туя</td></tr>
-<tr><td>верна, красивее, оптовый</td><td>верн<b>а</b>, крас<b>и</b>вее, опт<b>о</b>вый</td></tr>
-<tr><td>брала, начала, поняла</td><td>брал<b>а</b>, начал<b>а</b>, понял<b>а</b></td></tr></table>`},
-    {id: "B4", title: "В4. Фразеология", rule: `
-<table><tr><th>Фразеологизм</th><th>Значение</th></tr>
-<tr><td>бить баклуши</td><td>бездельничать</td></tr>
-<tr><td>спустя рукава</td><td>небрежно</td></tr>
-<tr><td>во весь дух</td><td>быстро</td></tr>
-<tr><td>кот наплакал</td><td>мало</td></tr>
-<tr><td>водить за нос</td><td>обманывать</td></tr>
-<tr><td>как снег на голову</td><td>внезапно</td></tr></table>`},
-    {id: "B5", title: "В5. Фонетика. Озвончение/оглушение, непроизносимые согласные", rule: `
-<p><b>Оглушение:</b> в конце слова (<i>ду[п]</i>), перед глухим (<i>ска[с]ка</i>).<br>
-<b>Озвончение:</b> перед звонким (<i>про[з']ба</i>).</p>
-<table><tr><th>Сочетание</th><th>Не произносится</th><th>Примеры</th></tr>
-<tr><td>стн</td><td>[сн]</td><td>чес[н]ый, мес[н]ость</td></tr>
-<tr><td>здн</td><td>[зн]</td><td>поз[н]о, звёз[н]ый</td></tr>
-<tr><td>лнц</td><td>[нц]</td><td>со[н]це</td></tr>
-<tr><td>вств</td><td>[ств]</td><td>чу[ств]о, здра[ств]уй</td></tr>
+<table class="table">
+    <tr><th>Приставка</th><th>Значение / Условие</th><th>Примеры</th></tr>
+    <tr><td>ПРЕ-</td><td>= очень, = пере</td><td>пр<u>е</u>милый, пр<u>е</u>градить</td></tr>
+    <tr><td>ПРИ-</td><td>приближение, присоединение, неполнота</td><td>пр<u>и</u>ехать, пр<u>и</u>клеить, пр<u>и</u>сесть</td></tr>
+    <tr><td>на -З</td><td>перед звонкими</td><td>разбежаться, беззвучный</td></tr>
+    <tr><td>на -С</td><td>перед глухими</td><td>расстелить, бесполезный</td></tr>
 </table>
-<p><b>Запомнить:</b> блеснуть, плеснуть, ровесник, сверстник, чувство, участвовать, шествовать.</p>`},
+<div class="info-block"><i class="fas fa-memory"></i> <b>Запомнить:</b> здесь, здание, здоровье, ни зги. Приставка С- всегда пишется одинаково: сделать, сбить.</div>`},
+    {id: "A3", title: "А3. Правописание суффиксов", rule: `
+<table class="table">
+    <tr><th>Часть речи</th><th>Суффикс</th><th>Условие</th><th>Примеры</th></tr>
+    <tr><td>прилагательные</td><td>-ив-</td><td>под ударением</td><td>крас<u>и</u>вый, правд<u>и</u>вый</td></tr>
+    <tr><td>прилагательные</td><td>-ев-</td><td>без ударения</td><td>сирен<u>е</u>вый, тюл<u>е</u>вый</td></tr>
+    <tr><td>прилагательные</td><td>-лив-, -чиv-</td><td>всегда И</td><td>заботл<u>и</u>вый, доверч<u>и</u>вый</td></tr>
+    <tr><td>существительные</td><td>-чик-</td><td>после д,т,з,с,ж</td><td>переводчик, разведчик</td></tr>
+    <tr><td>существительные</td><td>-щик-</td><td>после остальных</td><td>каменщик, стекольщик</td></tr>
+</table>`},
+    {id: "A4", title: "А4. Правописание личных окончаний глаголов и суффиксов причастий", rule: `
+<table class="table">
+    <tr><th>Спряжение</th><th>Глаголы</th><th>Окончания ед.ч.</th><th>Окончания мн.ч.</th></tr>
+    <tr><td>I спр.</td><td>на -ать, -еть, -ять, -оть, -уть, -ти, -чь + брить, стелить</td><td>-у/-ю, -ешь, -ет</td><td>-ем, -ете, -ут/-ют</td></tr>
+    <tr><td>II спр.</td><td>на -ить + гнать, держать, дышать, слышать, видеть, смотреть, ненавидеть, обидеть, вертеть, терпеть, зависеть</td><td>-у/-ю, -ишь, -ит</td><td>-им, -ите, -ат/-ят</td></tr>
+</table>
+<div class="info-block"><i class="fas fa-crown"></i> <b>Суффиксы причастий настоящего времени</b><br>
+Действительные: I спр. <span class="ex-word">-ущ-/-ющ-</span> (пиш<u>ущ</u>ий), II спр. <span class="ex-word">-ащ-/-ящ-</span> (дыш<u>ащ</u>ий)<br>
+Страдательные: I спр. <span class="ex-word">-ем-/-ом-</span> (чита<u>ем</u>ый), II спр. <span class="ex-word">-им-</span> (вид<u>им</u>ый)</div>`},
+    {id: "A5", title: "А5. Правописание НЕ с разными частями речи", rule: `
+<table class="table">
+    <tr><th>Часть речи</th><th>Слитно</th><th>Раздельно</th></tr>
+    <tr><td>сущ., прил., нареч. на -о/-е</td><td>без НЕ не употребляется<br>можно заменить синонимом</td><td>противопоставление с <b>а</b><br>слова <i>отнюдь не, далеко не, вовсе не</i></td></tr>
+    <tr><td>причастия</td><td>нет зависимого слова<br>с наречиями меры и степени</td><td>есть зависимое слово<br>краткие причастия</td></tr>
+    <tr><td>глаголы, деепричастия</td><td>без НЕ не употребляется (негодовать)</td><td>все остальные случаи</td></tr>
+</table>
+<div class="example"><i class="fas fa-star"></i> <b>Примеры:</b> <span class="ex-word">негодовать</span> (без НЕ не употр.), <span class="ex-word">не правда, а ложь</span> (противопоставление)</div>`},
+    {id: "A6", title: "А6. Правописание НЕ и НИ в местоимениях и наречиях", rule: `
+<table class="table">
+    <tr><th>НЕ</th><th>НИ</th></tr>
+    <tr><td>под ударением</td><td>без ударения</td></tr>
+    <tr><td><span class="ex-word">н<u>е</u>где, н<u>е</u>куда, н<u>е</u>кто</span></td><td><span class="ex-word">н<u>и</u>где, н<u>и</u>куда, н<u>и</u>кто</span></td></tr>
+</table>
+<div class="info-block"><i class="fas fa-code-branch"></i> <b>Раздельно:</b> если есть предлог — <span class="ex-word">не у кого, ни с кем, не о чем</span></div>`},
+    {id: "A7", title: "А7. Слитное, дефисное, раздельное написание слов", rule: `
+<table class="table">
+    <tr><th>Слитно</th><th>Дефис</th><th>Раздельно</th></tr>
+    <tr><td>сложные слова (пароход)<br>с полу- (полуботинки)<br>иноязычные приставки</td><td>пол- перед гласной, Л, прописной<br>повтор слов (чуть-чуть)<br>наречия с по- + -ому/-ему/-и</td><td>сочетания предлогов с сущ.<br>наречные выражения</td></tr>
+</table>
+<div class="example"><i class="fas fa-pen-fancy"></i> <b>Примеры:</b> <span class="ex-word">пол-арбуза, пол-лимона, пол-Москвы; по-новому, по-русски; на ходу, без устали</span></div>`},
+    {id: "A8", title: "А8. Правописание предлогов, союзов, частиц", rule: `
+<table class="table">
+    <tr><th>Предлоги (слитно)</th><th>Предлоги (раздельно)</th></tr>
+    <tr><td>ввиду, вследствие, вроде, насчёт</td><td>в течение, в продолжение, в заключение, в связи с</td></tr>
+</table>
+<table class="table">
+    <tr><th>Союз (слитно)</th><th>Омоним (раздельно)</th></tr>
+    <tr><td>тоже, также (=и)<br>чтобы (=для того чтобы)<br>зато (=но)<br>итак (=следовательно)</td><td>то же, так же<br>что бы<br>за то<br>и так</td></tr>
+</table>
+<div class="info-block"><i class="fas fa-grip-lines"></i> <b>Частицы:</b> раздельно — бы, ли, же; через дефис — -то, -либо, -нибудь, кое-.</div>`},
+    {id: "A9", title: "А9. Тире между подлежащим и сказуемым", rule: `
+<table class="table">
+    <tr><th>Тире ставится</th><th>Тире не ставится</th></tr>
+    <tr><td>сущ. – сущ.<br>числ. – числ.<br>инф. – инф.<br>перед <i>это, вот, значит</i></td><td>есть связка <i>есть</i><br>подлежащее – личное местоимение<br>сказуемое – прилагательное</td></tr>
+</table>
+<div class="example"><i class="fas fa-quote-left"></i> <b>Примеры:</b> <span class="ex-word">Книга – источник знаний. Дважды два – четыре. Жить – родине служить.</span><br>
+<span class="ex-word">Бедность не порок. Я ученик. День теплый.</span></div>`},
+    {id: "A10", title: "А10. Обособленные определения и приложения", rule: `
+<div class="info-block"><i class="fas fa-check-circle"></i> <b>Обособляются запятыми:</b><br>
+• причастный оборот после определяемого слова: <i>Лес, <u>поражённый дождями</u>, стоял мрачный</i><br>
+• определение, относящееся к личному местоимению: <i><u>Усталый</u>, я прилёг отдохнуть</i><br>
+• распространённое приложение: <i>Сосед, <u>мужчина лет пятидесяти</u>, вышел</i><br>
+• приложение с <b>как</b> (оттенок причины): <i><u>Как человек умный</u>, он понял это сразу</i></div>
+<div class="example"><i class="fas fa-ban"></i> <b>Не обособляются:</b> определение перед определяемым словом; приложение с <b>как</b> в значении «в качестве»: <i>Он известен <u>как хирург</u></i></div>`},
+    {id: "A11", title: "А11. Обособленные обстоятельства", rule: `
+<div class="info-block"><i class="fas fa-check-circle"></i> <b>Обособляются запятыми:</b><br>
+• деепричастные обороты: <i><u>Спустившись к реке</u>, мы увидели лодку</i><br>
+• одиночные деепричастия: <i>Он шёл, <u>не оглядываясь</u></i><br>
+• обороты с <b>несмотря на</b>: <i><u>Несмотря на дождь</u>, мы пошли гулять</i></div>
+<div class="example"><i class="fas fa-ban"></i> <b>Не обособляются:</b> фразеологизмы (<i>работал спустя рукава</i>), деепричастия, перешедшие в наречия (<i>сидел молча</i>)</div>`},
+    {id: "A12", title: "А12. Знаки препинания в ССП и при однородных членах", rule: `
+<div class="info-block"><i class="fas fa-check-circle"></i> <b>Запятая между однородными членами ставится:</b><br>
+• перед повторяющимися союзами (<i>и … и, ни … ни, то … то</i>)<br>
+• перед противительными (<i>а, но, да (=но), однако, зато</i>)</div>
+<div class="example"><i class="fas fa-ban"></i> <b>Запятая не ставится:</b> между однородными членами с одиночным союзом <b>и</b>; в фразеологизмах (<i>ни свет ни заря</i>)</div>
+<div class="info-block"><i class="fas fa-link"></i> <b>В ССП запятая ставится</b>, если части не имеют общего второстепенного члена.<br>
+<b>Не ставится</b>, если есть общий второстепенный член: <i>В саду пели птицы и шумели деревья</i></div>`},
+    {id: "A13", title: "А13. Знаки препинания в СПП", rule: `
+<div class="info-block"><i class="fas fa-check-circle"></i> <b>Придаточная часть отделяется запятой:</b> <i>Я знаю, <u>что ты придёшь</u>. <u>Когда наступит утро</u>, мы отправимся в путь.</i></div>
+<div class="example"><i class="fas fa-ban"></i> <b>Запятая не ставится:</b><br>
+• если придаточная состоит из одного союзного слова: <i>Он сказал, что пойдёт, но не сказал <u>когда</u></i><br>
+• если есть отрицание: <i>Он не знал, <u>что ответить</u></i><br>
+• если придаточная — фразеологизм: <i>Он пришёл <u>как ни в чём не бывало</u></i></div>
+<div class="info-block"><i class="fas fa-layer-group"></i> <b>Однородные придаточные:</b> если соединены одиночным союзом <b>и</b>, запятая не ставится.</div>`},
+    {id: "A14", title: "А14. Знаки препинания в БСП", rule: `
+<table class="table">
+    <tr><th>Знак</th><th>Условие</th><th>Пример</th></tr>
+    <tr><td>,</td><td>перечисление</td><td>Солнце село, наступила тишина</td></tr>
+    <tr><td>;</td><td>части распространены</td><td>Солнце уже высоко; птицы заливаются</td></tr>
+    <tr><td>:</td><td>пояснение (а именно)<br>причина (потому что)<br>изъяснение (и увидел, что)</td><td>Я понял одно: нужно уходить.<br>Я не пошёл: было холодно.<br>Я выглянул: на улице шёл снег</td></tr>
+    <tr><td>—</td><td>противопоставление, время, условие, следствие, быстрая смена событий</td><td>Смелые побеждают – трусливые погибают.<br>Солнце взошло – день начинается.</td></tr>
+</table>`},
+    {id: "A15", title: "А15. Вводные слова и обращения", rule: `
+<div class="info-block"><i class="fas fa-check-circle"></i> <b>Вводные слова выделяются запятыми:</b><br>
+• уверенность: конечно, безусловно<br>• неуверенность: кажется, вероятно<br>• чувства: к счастью, к сожалению<br>• источник: по-моему, говорят<br>• порядок: во-первых, итак</div>
+<div class="example"><i class="fas fa-ban"></i> <b>Не являются вводными:</b> авось, будто, вдруг, ведь, даже, как будто, словно, якобы.</div>
+<div class="info-block"><i class="fas fa-user"></i> <b>Обращения</b> выделяются запятыми: <i>Иван, принеси книгу. Друзья, рад вас видеть!</i></div>`},
+    {id: "A16", title: "А16. Прямая речь и диалог", rule: `
+<table class="table">
+    <tr><th>Схема</th><th>Пример</th></tr>
+    <tr><td>А: «П».</td><td>Мама сказала: «Иди домой».</td></tr>
+    <tr><td>«П», – а.</td><td>«Иди домой», – сказала мама.</td></tr>
+    <tr><td>«П?» – а.</td><td>«Ты идёшь?» – спросила мама.</td></tr>
+</table>
+<div class="info-block"><i class="fas fa-comments"></i> <b>Диалог:</b><br>
+<i>- Ты идёшь?<br>- Да, иду.</i><br>
+В строку: <i>«Ты идёшь?» – «Да, иду».</i></div>`},
+    {id: "A17", title: "А17. Знаки препинания в предложениях с разными видами связи", rule: `
+<div class="info-block"><i class="fas fa-code-branch"></i> <b>Стык союзов</b><br>
+• Запятая ставится, если нет второй части двойного союза (<i>то, но, однако</i>):<br>
+<i>Я понял, что, если не приду вовремя, меня не простят.</i><br>
+• Запятая не ставится, если есть вторая часть двойного союза:<br>
+<i>Я понял, что если не приду вовремя, <u>то</u> меня не простят.</i></div>
+<div class="info-block"><i class="fas fa-chart-line"></i> <b>Анализ конструкции:</b> найти грамматические основы → определить вид связи → расставить знаки.</div>`},
+    {id: "A18", title: "А18. Стили и типы речи", rule: `
+<table class="table">
+    <tr><th>Стиль</th><th>Особенности</th><th>Сфера</th></tr>
+    <tr><td>Разговорный</td><td>непринуждённость</td><td>бытовое общение</td></tr>
+    <tr><td>Художественный</td><td>образность, выразительность</td><td>литература</td></tr>
+    <tr><td>Публицистический</td><td>эмоциональность, призывность</td><td>СМИ, выступления</td></tr>
+    <tr><td>Научный</td><td>термины, логичность</td><td>наука, учёба</td></tr>
+    <tr><td>Официально-деловой</td><td>точность, стандартность</td><td>документы, законы</td></tr>
+</table>
+<div class="info-block"><i class="fas fa-pen-fancy"></i> <b>Типы речи:</b> описание (какой?), повествование (что произошло?), рассуждение (почему?)</div>`},
+    {id: "B1", title: "В1. Лексическое значение слова", rule: `
+<div class="info-block"><i class="fas fa-lightbulb"></i> <b>Лексическое значение</b> – то, что обозначает слово.</div>
+<div class="example"><i class="fas fa-star"></i> <b>Однозначные и многозначные слова:</b> <span class="ex-word">берёза</span> (однозначное), <span class="ex-word">ключ</span> (многозначное: гаечный, скрипичный, родник)</div>
+<div class="example"><i class="fas fa-star"></i> <b>Прямое и переносное значение:</b> <span class="ex-word">золотое кольцо</span> (прямое), <span class="ex-word">золотые руки, золотой характер</span> (переносное)</div>
+<div class="info-block"><i class="fas fa-globe"></i> <b>Контекстуальное значение</b> – значение, которое слово приобретает только в данном контексте.</div>`},
+    {id: "B2", title: "В2. Лексические нормы (синонимы, антонимы, паронимы)", rule: `
+<div class="info-block"><i class="fas fa-exchange-alt"></i> <b>Синонимы</b> – близкие по значению: <span class="ex-word">радостный – весёлый</span></div>
+<div class="info-block"><i class="fas fa-arrows-alt-h"></i> <b>Антонимы</b> – противоположные: <span class="ex-word">день – ночь</span></div>
+<div class="info-block"><i class="fas fa-waveform"></i> <b>Паронимы</b> – похожие по звучанию, разные по значению:</div>
+<table class="table">
+    <tr><th>Паронимы</th><th>Значение</th></tr>
+    <tr><td>одеть – надеть</td><td>одеть кого-то, надеть что-то</td></tr>
+    <tr><td>абонент – абонемент</td><td>абонент – пользователь, абонемент – документ</td></tr>
+    <tr><td>дипломат – дипломант</td><td>дипломат – специалист, дипломант – победитель конкурса</td></tr>
+    <tr><td>эффектный – эффективный</td><td>эффектный – производящий впечатление, эффективный – действенный</td></tr>
+</table>`},
+    {id: "B3", title: "В3. Орфоэпические нормы (ударение)", rule: `
+<table class="table">
+    <tr><th>Слова</th><th>Ударение</th></tr>
+    <tr><td>каталог, квартал, договор</td><td>катал<b>о</b>г, кварт<b>а</b>л, догов<b>о</b>р</td></tr>
+    <tr><td>звонит, баловать, облегчить</td><td>звон<b>и</b>т, балов<b>а</b>ть, облегч<b>и</b>ть</td></tr>
+    <tr><td>премировать, красивее, щавель</td><td>премиров<b>а</b>ть, крас<b>и</b>вее, щав<b>е</b>ль</td></tr>
+    <tr><td>торты, банты, жалюзи</td><td>т<b>о</b>рты, б<b>а</b>нты, жалюз<b>и</b></td></tr>
+    <tr><td>досуг, средства, статуя</td><td>дос<b>у</b>г, ср<b>е</b>дства, ст<b>а</b>туя</td></tr>
+    <tr><td>верна, красивее, оптовый</td><td>верн<b>а</b>, крас<b>и</b>вее, опт<b>о</b>вый</td></tr>
+    <tr><td>брала, начала, поняла</td><td>брал<b>а</b>, начал<b>а</b>, понял<b>а</b></td></tr>
+</table>`},
+    {id: "B4", title: "В4. Фразеология", rule: `
+<table class="table">
+    <tr><th>Фразеологизм</th><th>Значение</th></tr>
+    <tr><td>бить баклуши</td><td>бездельничать</td></tr>
+    <tr><td>спустя рукава</td><td>небрежно</td></tr>
+    <tr><td>во весь дух</td><td>быстро</td></tr>
+    <tr><td>кот наплакал</td><td>мало</td></tr>
+    <tr><td>водить за нос</td><td>обманывать</td></tr>
+    <tr><td>как снег на голову</td><td>внезапно</td></tr>
+</table>`},
+    {id: "B5", title: "В5. Фонетика. Озвончение/оглушение, непроизносимые согласные", rule: `
+<div class="info-block"><i class="fas fa-volume-up"></i> <b>Оглушение:</b> в конце слова (<i>ду[п]</i>), перед глухим (<i>ска[с]ка</i>)<br>
+<b>Озвончение:</b> перед звонким (<i>про[з']ба</i>)</div>
+<table class="table">
+    <tr><th>Сочетание</th><th>Не произносится</th><th>Примеры</th></tr>
+    <tr> домаћинствимастн</td><td>[сн]</td><td>чес[н]ый, мес[н]ость</td></tr>
+    <tr><td>здн</td><td>[зн]</td><td>поз[н]о, звёз[н]ый</td></tr>
+    <tr><td>лнц</td><td>[нц]</td><td>со[н]це</td></tr>
+    <tr><td>вств</td><td>[ств]</td><td>чу[ств]о, здра[ств]уй</td></tr>
+</table>
+<div class="info-block"><i class="fas fa-memory"></i> <b>Запомнить:</b> блеснуть, плеснуть, ровесник, сверстник, чувство, участвовать, шествовать.</div>`},
     {id: "B6", title: "В6. Морфемика и словообразование", rule: `
 <table class="table">
-     <tr><th>Способ</th><th>Пример</th></tr>
-     <tr><td>приставочный</td><td>написать → переписать</td></tr>
-     <tr><td>суффиксальный</td><td>учитель → учительница</td></tr>
-     <tr><td>приставочно-суффиксальный</td><td>стол → настольный</td></tr>
-     <tr><td>бессуффиксный</td><td>выходить → выход</td></tr>
-     <tr><td>сложение</td><td>лес + степь → лесостепь</td></tr>
-     <tr><td>переход</td><td>столовая (сущ.)</td></tr>
+    <tr><th>Способ</th><th>Пример</th></tr>
+    <tr><td>приставочный</td><td>написать → переписать</td></tr>
+    <tr><td>суффиксальный</td><td>учитель → учительница</td></tr>
+    <tr><td>приставочно-суффиксальный</td><td>стол → настольный</td></tr>
+    <tr><td>бессуффиксный</td><td>выходить → выход</td></tr>
+    <tr><td>сложение</td><td>лес + степь → лесостепь</td></tr>
+    <tr><td>переход из одной части речи в другую</td><td>столовая (сущ.)</td></tr>
 </table>`},
     {id: "B7", title: "В7. Морфология. Части речи", rule: `
-<p><b>Самостоятельные:</b> сущ., прил., числ., местоим., глагол, наречие.<br>
-<b>Служебные:</b> предлоги, союзы, частицы.<br>
-<b>Междометия:</b> выражают чувства (ах, ох, ура).</p>
-<p><i>Примеры: дом, красный, пять, я, читать, быстро; в, и, бы; ах!</i></p>`},
+<div class="info-block"><i class="fas fa-tag"></i> <b>Самостоятельные:</b> сущ., прил., числ., местоим., глагол, наречие.</div>
+<div class="info-block"><i class="fas fa-link"></i> <b>Служебные:</b> предлоги, союзы, частицы.</div>
+<div class="example"><i class="fas fa-smile"></i> <b>Междометия:</b> выражают чувства (ах, ох, ура)</div>
+<div class="example"><i class="fas fa-star"></i> <b>Примеры:</b> дом, красный, пять, я, читать, быстро; в, и, бы; ах!</div>`},
     {id: "B8", title: "В8. Морфология. Глагол и его формы", rule: `
-<p><b>Глагол:</b> вид, переходность, возвратность, наклонение, время, лицо, число, род.</p>
-<p><b>Причастие:</b> <i>читающий, прочитанный</i><br>
-<b>Деепричастие:</b> <i>читая, прочитав</i><br>
-<b>Инфинитив:</b> может быть подлежащим, сказуемым, дополнением, определением, обстоятельством.</p>
-<p><i>Учить – мой долг. Я хочу учиться. Мама велела учиться. Желание учиться. Я пришёл учиться.</i></p>`},
+<div class="info-block"><i class="fas fa-running"></i> <b>Глагол:</b> вид, переходность, возвратность, наклонение, время, лицо, число, род.</div>
+<div class="example"><i class="fas fa-star"></i> <b>Причастие:</b> <span class="ex-word">читающий, прочитанный</span><br>
+<b>Деепричастие:</b> <span class="ex-word">читая, прочитав</span><br>
+<b>Инфинитив:</b> может быть подлежащим, сказуемым, дополнением, определением, обстоятельством.<br>
+<span class="ex-word">Учить – мой долг. Я хочу учиться. Мама велела учиться. Желание учиться. Я пришёл учиться.</span></div>`},
     {id: "B9", title: "В9. Словосочетание. Виды подчинительной связи", rule: `
-<p><b>Согласование:</b> <i>новая книга</i><br>
-<b>Управление:</b> <i>читать книгу</i><br>
-<b>Примыкание:</b> <i>быстро бежать</i></p>`},
+<div class="info-block"><i class="fas fa-handshake"></i> <b>Согласование:</b> <span class="ex-word">новая книга</span><br>
+<b>Управление:</b> <span class="ex-word">читать книгу</span><br>
+<b>Примыкание:</b> <span class="ex-word">быстро бежать</span></div>`},
     {id: "B10", title: "В10. Грамматическая основа предложения", rule: `
-<p><b>Подлежащее</b> – о ком/о чём говорится.<br>
-<b>Сказуемое</b> – что говорится.</p>
-<p><b>Виды сказуемого:</b> простое глагольное (<i>читает</i>), составное глагольное (<i>начал читать</i>), составное именное (<i>был учителем</i>).</p>
-<p><b>Односоставные:</b> определённо-личные (<i>Люблю грозу</i>), неопределённо-личные (<i>В дверь стучат</i>), безличные (<i>Мне грустно</i>), назывные (<i>Зима</i>).</p>`},
+<div class="info-block"><i class="fas fa-chess-queen"></i> <b>Подлежащее</b> – о ком/о чём говорится.<br>
+<b>Сказуемое</b> – что говорится.</div>
+<div class="example"><i class="fas fa-star"></i> <b>Виды сказуемого:</b> простое глагольное (<i>читает</i>), составное глагольное (<i>начал читать</i>), составное именное (<i>был учителем</i>)</div>
+<div class="info-block"><i class="fas fa-crown"></i> <b>Односоставные:</b> определённо-личные (<i>Люблю грозу</i>), неопределённо-личные (<i>В дверь стучат</i>), безличные (<i>Мне грустно</i>), назывные (<i>Зима</i>)</div>`},
     {id: "B11", title: "В11. Односоставные и двусоставные предложения", rule: `
-<p><b>Двусоставные:</b> есть и подлежащее, и сказуемое (<i>Солнце светит</i>).</p>
-<p><b>Односоставные:</b><br>
+<div class="info-block"><i class="fas fa-balance-scale"></i> <b>Двусоставные:</b> есть и подлежащее, и сказуемое (<i>Солнце светит</i>)</div>
+<div class="info-block"><i class="fas fa-crown"></i> <b>Односоставные:</b><br>
 • определённо-личные: <i>Люблю грозу в начале мая</i><br>
 • неопределённо-личные: <i>В дверь стучат</i><br>
 • безличные: <i>Мне холодно. Вечереет</i><br>
-• назывные: <i>Зима. Мороз и солнце</i></p>`},
+• назывные: <i>Зима. Мороз и солнце</i></div>`},
     {id: "B12", title: "В12. Однородные члены предложения", rule: `
-<p><b>Запятая ставится:</b> между однородными членами без союзов, перед противительными союзами, перед повторяющимися союзами (<i>И снег, и ветер, и мороз</i>).</p>
-<p><b>Запятая не ставится:</b> между однородными членами с одиночным союзом <b>и</b>; в фразеологизмах (<i>ни свет ни заря</i>).</p>`},
+<div class="info-block"><i class="fas fa-check-circle"></i> <b>Запятая ставится:</b> между однородными членами без союзов, перед противительными союзами, перед повторяющимися союзами (<i>И снег, и ветер, и мороз</i>)</div>
+<div class="example"><i class="fas fa-ban"></i> <b>Запятая не ставится:</b> между однородными членами с одиночным союзом <b>и</b>; в фразеологизмах (<i>ни свет ни заря</i>)</div>`},
     {id: "B13", title: "В13. Обособленные члены предложения", rule: `
-<p><b>Обособляются:</b> причастный оборот после определяемого слова (<i>Лес, покрытый инеем, стоял</i>), деепричастный оборот (<i>Спустившись к реке, мы увидели лодку</i>), приложение (<i>Сосед, мужчина лет пятидесяти, вышел</i>), уточняющие члены (<i>Там, на горе, стоял дом</i>).</p>
-<p><b>Не обособляются:</b> определение перед определяемым словом, фразеологизмы (<i>работал спустя рукава</i>), деепричастия, перешедшие в наречия (<i>сидел молча</i>).</p>`},
+<div class="info-block"><i class="fas fa-check-circle"></i> <b>Обособляются:</b><br>
+• причастный оборот после определяемого слова (<i>Лес, покрытый инеем, стоял</i>)<br>
+• деепричастный оборот (<i>Спустившись к реке, мы увидели лодку</i>)<br>
+• приложение (<i>Сосед, мужчина лет пятидесяти, вышел</i>)<br>
+• уточняющие члены (<i>Там, на горе, стоял дом</i>)</div>
+<div class="example"><i class="fas fa-ban"></i> <b>Не обособляются:</b> определение перед определяемым словом, фразеологизмы (<i>работал спустя рукава</i>), деепричастия, перешедшие в наречия (<i>сидел молча</i>)</div>`},
     {id: "B14", title: "В14. Уточняющие члены предложения", rule: `
-<p><b>Уточняющие члены</b> сужают понятие, выделяются запятыми:<br>
+<div class="info-block"><i class="fas fa-crosshairs"></i> <b>Уточняющие члены</b> сужают понятие, выделяются запятыми:<br>
 • места: <i>Там, внизу, шумела река</i><br>
 • времени: <i>Вечером, после заката, стало прохладно</i><br>
-• образа действия: <i>Он говорил тихо, почти шёпотом</i></p>`},
+• образа действия: <i>Он говорил тихо, почти шёпотом</i></div>`},
     {id: "B15", title: "В15. Знаки препинания в предложениях со сравнительными оборотами", rule: `
-<p><b>Выделяются запятыми:</b> <i>Она пела, как соловей. Глаза её сияли, словно звёзды.</i></p>
-<p><b>Не выделяются:</b> если оборот входит в состав сказуемого (<i>Глаза как звёзды</i>), если оборот – фразеологизм (<i>работает как вол</i>), если перед <b>как</b> есть отрицание (<i>говорил не как учитель</i>).</p>
-<p><b>Вводные сочетания:</b> <i>как правило, как всегда, как сейчас</i> – выделяются запятыми.</p>`},
+<div class="info-block"><i class="fas fa-check-circle"></i> <b>Выделяются запятыми:</b> <i>Она пела, как соловей. Глаза её сияли, словно звёзды.</i></div>
+<div class="example"><i class="fas fa-ban"></i> <b>Не выделяются:</b> если оборот входит в состав сказуемого (<i>Глаза как звёзды</i>), если оборот – фразеологизм (<i>работает как вол</i>), если перед <b>как</b> есть отрицание (<i>говорил не как учитель</i>)</div>
+<div class="info-block"><i class="fas fa-star"></i> <b>Вводные сочетания:</b> <i>как правило, как всегда, как сейчас</i> – выделяются запятыми.</div>`},
     {id: "B16", title: "В16. Знаки препинания в предложениях с вводными словами и обращениями", rule: `
-<p><b>Вводные слова</b> выделяются запятыми: <i>конечно, кажется, к счастью, по-моему, во-первых</i>.</p>
-<p><b>Не являются вводными:</b> авось, будто, вдруг, ведь, даже, как будто, словно, якобы.</p>
-<p><b>Обращения</b> выделяются запятыми: <i>Иван, принеси книгу. Друзья, рад вас видеть!</i></p>`},
+<div class="info-block"><i class="fas fa-check-circle"></i> <b>Вводные слова</b> выделяются запятыми: <i>конечно, кажется, к счастью, по-моему, во-первых</i></div>
+<div class="example"><i class="fas fa-ban"></i> <b>Не являются вводными:</b> авось, будто, вдруг, ведь, даже, как будто, словно, якобы.</div>
+<div class="info-block"><i class="fas fa-user"></i> <b>Обращения</b> выделяются запятыми: <i>Иван, принеси книгу. Друзья, рад вас видеть!</i></div>`},
     {id: "B17", title: "В17. Морфологические нормы (образование форм слова)", rule: `
-<p><b>Имена существительные:</b> директор<u>а</u>, профессор<u>а</u>, но договор<u>ы</u>, инженер<u>ы</u>.<br>
-Родительный падеж мн.ч.: нет чулок, носков, апельсинов, помидоров, но яблок.</p>
-<p><b>Степени сравнения:</b> красивый – красивее – самый красивый.</p>
-<p><b>Числительные:</b> оба (м.р.) – обе (ж.р.); склонение: пятидесяти, пятьюдесятью, двухсот, двумстам.</p>`},
+<div class="info-block"><i class="fas fa-star"></i> <b>Имена существительные:</b> директор<u>а</u>, профессор<u>а</u>, но договор<u>ы</u>, инженер<u>ы</u>.<br>
+Родительный падеж мн.ч.: нет чулок, носков, апельсинов, помидоров, но яблок.</div>
+<div class="info-block"><i class="fas fa-chart-line"></i> <b>Степени сравнения:</b> красивый – красивее – самый красивый.</div>
+<div class="info-block"><i class="fas fa-hashtag"></i> <b>Числительные:</b> оба (м.р.) – обе (ж.р.); склонение: пятидесяти, пятьюдесятью, двухсот, двумстам.</div>`},
     {id: "B18", title: "В18. Синтаксические нормы (управление, согласование)", rule: `
-<p><b>Согласование:</b> сказуемое с подлежащим в роде и числе: <i>Большинство согласил<u>ось</u></i>.</p>
-<p><b>Управление:</b> заведующий чем (не чего), оплатить что (не за что), согласно чему, благодаря чему (Д.п.), вопреки чему (Д.п.).</p>`},
+<div class="info-block"><i class="fas fa-handshake"></i> <b>Согласование:</b> сказуемое с подлежащим в роде и числе: <i>Большинство согласил<u>ось</u></i></div>
+<div class="info-block"><i class="fas fa-code-branch"></i> <b>Управление:</b> заведующий чем (не чего), оплатить что (не за что), согласно чему, благодаря чему (Д.п.), вопреки чему (Д.п.).</div>`},
     {id: "B19", title: "В19. Речевые нормы (плеоназм, тавтология)", rule: `
-<p><b>Плеоназм</b> – лишние слова: <i>свободная вакансия, хронометраж времени</i>.</p>
-<p><b>Тавтология</b> – повтор однокоренных слов: <i>рассказывать рассказ, спросить вопрос</i>.</p>
-<p><b>Лексическая несочетаемость:</b> <i>играть значение</i> (надо: играть роль / иметь значение), <i>одержать поражение</i> (надо: одержать победу / потерпеть поражение).</p>`},
+<div class="info-block"><i class="fas fa-ban"></i> <b>Плеоназм</b> – лишние слова: <i>свободная вакансия, хронометраж времени</i></div>
+<div class="info-block"><i class="fas fa-ban"></i> <b>Тавтология</b> – повтор однокоренных слов: <i>рассказывать рассказ, спросить вопрос</i></div>
+<div class="example"><i class="fas fa-star"></i> <b>Лексическая несочетаемость:</b> <i>играть значение</i> (надо: играть роль / иметь значение), <i>одержать поражение</i> (надо: одержать победу / потерпеть поражение)</div>`},
     {id: "B20", title: "В20. Словообразовательный разбор", rule: `
-<p><b>Способы образования:</b> приставочный, суффиксальный, приставочно-суффиксальный, сложение, переход.</p>
-<p><b>Слова женского рода образованы от мужского:</b> <i>покупательница → покупатель</i>.</p>
-<p><b>Слова на -ние образованы от глаголов:</b> <i>страдание → страдать</i>.</p>
-<p><b>Слова на -тель образованы от глаголов:</b> <i>исследователь → исследовать</i>.</p>
-<p><b>Наречия образованы от прилагательных:</b> <i>живой → вживую, частый → зачастую</i>.</p>`},
+<div class="info-block"><i class="fas fa-code-branch"></i> <b>Способы образования:</b> приставочный, суффиксальный, приставочно-суффиксальный, сложение, переход.</div>
+<div class="example"><i class="fas fa-star"></i> <b>Слова женского рода образованы от мужского:</b> <i>покупательница → покупатель</i><br>
+<b>Слова на -ние образованы от глаголов:</b> <i>страдание → страдать</i><br>
+<b>Слова на -тель образованы от глаголов:</b> <i>исследователь → исследовать</i><br>
+<b>Наречия образованы от прилагательных:</b> <i>живой → вживую, частый → зачастую</i></div>`},
     {id: "B21", title: "В21. Текст. Типы связи предложений", rule: `
-<p><b>Цепная связь</b> – повтор ключевого слова, местоимение: <i>В лесу рос дуб. <u>Он</u> был могучим.</i></p>
-<p><b>Параллельная связь</b> – одинаковый порядок слов: <i>Солнце светит ярко. Птицы поют громко.</i></p>
-<p><b>Средства связи:</b> местоимения, лексический повтор, синонимы, союзы, наречия, синтаксический параллелизм.</p>`},
+<div class="info-block"><i class="fas fa-link"></i> <b>Цепная связь</b> – повтор ключевого слова, местоимение: <i>В лесу рос дуб. <u>Он</u> был могучим.</i></div>
+<div class="info-block"><i class="fas fa-grip-lines"></i> <b>Параллельная связь</b> – одинаковый порядок слов: <i>Солнце светит ярко. Птицы поют громко.</i></div>
+<div class="info-block"><i class="fas fa-tools"></i> <b>Средства связи:</b> местоимения, лексический повтор, синонимы, союзы, наречия, синтаксический параллелизм.</div>`},
     {id: "B22", title: "В22. Анализ текста (проблема, идея, средства выразительности)", rule: `
-<p><b>Средства выразительности:</b> эпитеты (<i>золотая осень</i>), метафоры (<i>костёр рябины красной</i>), сравнения (<i>лёд как сахар</i>), олицетворения (<i>ветер воет</i>), гиперболы (<i>не видел тебя сто лет</i>).</p>
-<p><b>Проблема</b> – вопрос, который поднимает автор.<br>
-<b>Идея</b> – главная мысль текста.</p>`}
+<div class="info-block"><i class="fas fa-palette"></i> <b>Средства выразительности:</b> эпитеты (<i>золотая осень</i>), метафоры (<i>костёр рябины красной</i>), сравнения (<i>лёд как сахар</i>), олицетворения (<i>ветер воет</i>), гиперболы (<i>не видел тебя сто лет</i>)</div>
+<div class="info-block"><i class="fas fa-question-circle"></i> <b>Проблема</b> – вопрос, который поднимает автор.<br>
+<b>Идея</b> – главная мысль текста.</div>`}
 ];
 
 let historyFacts = ["📚 Учи правила — сдавай экзамены", "🎯 Готовься к ЦЭ/ЦТ с нами", "📖 Повторение — мать учения", "✍️ Пиши грамотно, говори правильно"];
