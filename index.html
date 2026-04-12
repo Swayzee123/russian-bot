@@ -6374,7 +6374,13 @@ const motivationalQuotes=[
 'Путь к цели строится из твоих ежедневных решений.',
 'Продолжай. Самое важное уже происходит — ты не сдаёшься.'
 ];
-const telegramProfileAudioApi='/api/telegram/profile-audio';
+const telegramProfileAudioApi='api/telegram/profile-audio';
+const telegramProfileAudioApiFallbacks=[
+'api/telegram/profile-audio',
+'/api/telegram/profile-audio',
+'telegram/profile-audio',
+'/telegram/profile-audio'
+];
 const profileAudioCache={userId:0,status:'idle',audio:null,error:''};
 let lastQuoteIndex=-1;
 function plainOptions(options){return options.map(function(o){return o.replace(/^\d\)\s*/,'')})}
@@ -6433,8 +6439,12 @@ inner+='Не вижу данные пользователя Telegram.<br><small>
 }else if(state==='empty'){
 inner+='В профиле Telegram пока нет добавленной песни.';
 }else if(state==='error'){
+if(profileAudioCache.error==='HTTP 404'){
+inner+='API для песни не найден на сервере.<br><small>Нужно добавить backend-роут <code>/api/telegram/profile-audio</code>.</small>';
+}else{
 inner+='Не удалось получить песню из профиля.';
 if(profileAudioCache.error)inner+='<br><small>'+eh(profileAudioCache.error)+'</small>';
+}
 }else if(state==='ready'){
 const audio=profileAudioCache.audio||{};
 const title=eh(profileSongTitle(audio));
@@ -6445,18 +6455,31 @@ inner+='<span>'+title+'</span>'+(dur?'<br>'+dur:'')+link;
 }
 node.innerHTML=inner}
 
-async function fetchTelegramProfileAudio(userId){
-if(!telegramProfileAudioApi)return{ok:false,code:'NOT_CONFIGURED'};
+async function fetchTelegramProfileAudioFromUrl(apiUrl,userId){
 try{
-const base=new URL(telegramProfileAudioApi,window.location.href);
+const base=new URL(apiUrl,window.location.href);
 base.searchParams.set('user_id',String(userId));
 const res=await fetch(base.toString(),{method:'GET'});
 const data=await res.json().catch(function(){return{}});
 if(!res.ok||data.ok===false){
-return{ok:false,code:'API_ERROR',error:data.error||data.description||('HTTP '+res.status)}}
+const code=res.status===404?'API_ROUTE_NOT_FOUND':'API_ERROR';
+return{ok:false,code:code,error:data.error||data.description||('HTTP '+res.status)}}
 return{ok:true,audio:data.audio||null}
 }catch(e){
 return{ok:false,code:'NETWORK_ERROR',error:e&&e.message?e.message:'network error'}}}
+
+async function fetchTelegramProfileAudio(userId){
+if(!telegramProfileAudioApi&&!telegramProfileAudioApiFallbacks.length)return{ok:false,code:'NOT_CONFIGURED'};
+const urls=[];
+if(telegramProfileAudioApi)urls.push(telegramProfileAudioApi);
+telegramProfileAudioApiFallbacks.forEach(function(u){if(u&&!urls.includes(u))urls.push(u)});
+let lastErr={ok:false,code:'API_ROUTE_NOT_FOUND',error:'HTTP 404'};
+for(let i=0;i<urls.length;i++){
+const r=await fetchTelegramProfileAudioFromUrl(urls[i],userId);
+if(r.ok)return r;
+lastErr=r;
+if(r.code!=='API_ROUTE_NOT_FOUND')return r}
+return lastErr}
 
 async function loadTelegramProfileSong(user){
 const userId=Number(user&&user.id)||0;
